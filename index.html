@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Master</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">Quiz<span class="logo-accent">Master</span></h1>
+                <p class="tagline">Master knowledge, one question at a time</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Welcome Screen -->
+            <div id="welcomeScreen" class="screen active">
+                <div class="welcome-card">
+                    <div class="welcome-icon">🎯</div>
+                    <h2>Welcome to QuizMaster</h2>
+                    <p>Select a category or mix questions from all categories to begin</p>
+                    
+                    <div class="category-section">
+                        <label for="categorySelect" class="label">Choose Your Category</label>
+                        <select id="categorySelect" class="select-input">
+                            <option value="">-- Select a Category --</option>
+                            <option value="all">🔀 Mix All Categories</option>
+                        </select>
+                    </div>
+
+                    <div class="button-group">
+                        <button id="startBtn" class="btn btn-primary" onclick="startQuiz()">Start Quiz</button>
+                    </div>
+
+                    <div class="info-box">
+                        <p><strong>💡 Tip:</strong> Select "Mix All Categories" to practice questions from different topics!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quiz Screen -->
+            <div id="quizScreen" class="screen">
+                <div class="quiz-container">
+                    <!-- Progress Bar -->
+                    <div class="progress-section">
+                        <div class="progress-info">
+                            <span id="questionNumber" class="question-number">Question 1 of 10</span>
+                            <span id="scoreDisplay" class="score-display">Score: 0</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div id="progressFill" class="progress-fill"></div>
+                        </div>
+                    </div>
+
+                    <!-- Question -->
+                    <div class="question-section">
+                        <p id="categoryTag" class="category-tag"></p>
+                        <h2 id="questionText" class="question-text"></h2>
+                    </div>
+
+                    <!-- Options -->
+                    <div id="optionsContainer" class="options-container"></div>
+
+                    <!-- Navigation -->
+                    <div class="navigation-buttons">
+                        <button id="prevBtn" class="btn btn-secondary" onclick="previousQuestion()" style="display: none;">← Previous</button>
+                        <button id="nextBtn" class="btn btn-primary" onclick="nextQuestion()">Next →</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Screen -->
+            <div id="resultsScreen" class="screen">
+                <div class="results-card">
+                    <div id="resultIcon" class="result-icon"></div>
+                    <h2 id="resultTitle" class="result-title"></h2>
+                    
+                    <div class="score-breakdown">
+                        <div class="score-item">
+                            <span class="score-label">Total Score</span>
+                            <span id="finalScore" class="score-value">0/0</span>
+                        </div>
+                        <div class="score-item">
+                            <span class="score-label">Percentage</span>
+                            <span id="finalPercentage" class="score-value">0%</span>
+                        </div>
+                        <div class="score-item">
+                            <span class="score-label">Correct Answers</span>
+                            <span id="correctCount" class="score-value">0</span>
+                        </div>
+                    </div>
+
+                    <div id="resultDetails" class="result-details"></div>
+
+                    <div class="button-group">
+                        <button class="btn btn-primary" onclick="retakeQuiz()">Try Again</button>
+                        <button class="btn btn-secondary" onclick="backToHome()">Back to Home</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 QuizMaster. Keep learning! 📚</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="database.js"></script>
+</body>
+</html>
