@@ -342,6 +342,33 @@ body {
     font-weight: bold;
 }
 
+/* Feedback Styles for Correct/Wrong Answers */
+.option-label.correct-answer {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(16, 185, 129, 0.05));
+    border-color: var(--success);
+    border-width: 2px;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.option-label.correct-answer .option-checkmark {
+    background: var(--success);
+    border-color: var(--success);
+    color: white;
+}
+
+.option-label.wrong-answer {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(239, 68, 68, 0.05));
+    border-color: var(--danger);
+    border-width: 2px;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.option-label.wrong-answer .option-checkmark {
+    background: var(--danger);
+    border-color: var(--danger);
+    color: white;
+}
+
 /* ============================================
    RESULTS SCREEN
    ============================================ */
