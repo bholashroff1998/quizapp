@@ -132,12 +132,25 @@ function displayOptions(question) {
     const optionsContainer = document.getElementById('optionsContainer');
     optionsContainer.innerHTML = '';
 
+    const userAnswer = quizState.userAnswers[quizState.currentQuestionIndex];
+    const isAnswered = userAnswer !== null;
+
     question.options.forEach((option, index) => {
         const optionDiv = document.createElement('div');
         optionDiv.className = 'option';
         
         const optionId = `option-${index}`;
-        const isChecked = quizState.userAnswers[quizState.currentQuestionIndex] === index;
+        const isChecked = userAnswer === index;
+
+        // Determine styling based on answer feedback
+        let feedbackClass = '';
+        if (isAnswered) {
+            if (index === question.correctAnswer) {
+                feedbackClass = 'correct-answer';
+            } else if (isChecked && index !== question.correctAnswer) {
+                feedbackClass = 'wrong-answer';
+            }
+        }
 
         optionDiv.innerHTML = `
             <input 
@@ -147,8 +160,9 @@ function displayOptions(question) {
                 value="${index}"
                 ${isChecked ? 'checked' : ''}
                 onchange="selectAnswer(${index})"
+                ${isAnswered ? 'disabled' : ''}
             >
-            <label for="${optionId}" class="option-label">
+            <label for="${optionId}" class="option-label ${feedbackClass}">
                 <span class="option-checkmark"></span>
                 <span>${option}</span>
             </label>
@@ -161,13 +175,34 @@ function displayOptions(question) {
 // Select an answer
 function selectAnswer(optionIndex) {
     quizState.userAnswers[quizState.currentQuestionIndex] = optionIndex;
+    
+    // Calculate score immediately
+    const question = quizState.questions[quizState.currentQuestionIndex];
+    if (optionIndex === question.correctAnswer) {
+        quizState.score++;
+    }
+    
+    // Update score display
+    document.getElementById('scoreDisplay').textContent = `Score: ${quizState.score}`;
+    
+    // Refresh options to show feedback
+    displayOptions(question);
+    
+    // Disable further changes after answer is selected
+    const radioButtons = document.querySelectorAll('input[name="quiz-option"]');
+    radioButtons.forEach(radio => radio.disabled = true);
 }
 
 // Move to next question
 function nextQuestion() {
+    const userAnswer = quizState.userAnswers[quizState.currentQuestionIndex];
+    
+    if (userAnswer === null) {
+        alert('Please select an answer before proceeding!');
+        return;
+    }
+
     if (quizState.currentQuestionIndex < quizState.questions.length - 1) {
-        // Update score before moving
-        calculateScore();
         quizState.currentQuestionIndex++;
         displayQuestion();
         updateNavigationButtons();
@@ -181,8 +216,6 @@ function nextQuestion() {
 // Move to previous question
 function previousQuestion() {
     if (quizState.currentQuestionIndex > 0) {
-        // Update score before moving
-        calculateScore();
         quizState.currentQuestionIndex--;
         displayQuestion();
         updateNavigationButtons();
@@ -190,15 +223,6 @@ function previousQuestion() {
     }
 }
 
-// Calculate score for current question
-function calculateScore() {
-    const userAnswer = quizState.userAnswers[quizState.currentQuestionIndex];
-    const question = quizState.questions[quizState.currentQuestionIndex];
-
-    if (userAnswer !== null && userAnswer === question.correctAnswer) {
-        quizState.score++;
-    }
-}
 
 // Update navigation buttons visibility
 function updateNavigationButtons() {
@@ -213,9 +237,9 @@ function updateNavigationButtons() {
 
 // Finish Quiz
 function finishQuiz() {
-    // Calculate final score for last question
-    calculateScore();
-
+    // The score is already calculated as user answers questions
+    // (No need to recalculate the last question since it's done in nextQuestion)
+    
     // Display results
     displayResults();
     switchScreen('resultsScreen');
