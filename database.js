@@ -823,16 +823,19 @@ const quizDatabase = {
     ],
     "Geographical Status and Physical Features": [
         {
+            "category": "Geographical Status and Physical Features",
             "question": "नेपालले विश्वको कूल क्षेत्रफलको कति प्रतिशत भाग ओगटेको छ?",
             "options": ["०.०१ प्रतिशत", "०.०३ प्रतिशत", "०.०५ प्रतिशत", "०.१ प्रतिशत"],
             "correct": 1
         },
         {
+            "category": "Geographical Status and Physical Features",
             "question": "नेपालले एसिया महादेशको कति प्रतिशत भाग ओगटेको छ?",
             "options": ["०.१ प्रतिशत", "०.२ प्रतिशत", "०.३ प्रतिशत", "०.५ प्रतिशत"],
             "correct": 2
         },
         {
+            "category": "Geographical Status and Physical Features",
             "question": "नेपाल कति डिग्री अक्षांश र देशान्तरबीच अवस्थित छ?",
             "options": [
                 "२५°२२' उ. देखि २९°२७' उ. अक्षांश र ७९°४' पू. देखि ८७°१२' पू. देशान्तर",
@@ -843,41 +846,49 @@ const quizDatabase = {
             "correct": 1
         },
         {
+            "category": "Geographical Status and Physical Features",
             "question": "नेपाल एसियाको कुन भागमा अवस्थित छ?",
             "options": ["पूर्वी भाग", "पश्चिमी भाग", "मध्य भाग", "दक्षिणी भाग"],
             "correct": 2
         },
         {
+            "category": "Geographical Status and Physical Features",
             "question": "नेपालको पूर्व-पश्चिम औसत लम्बाइ कति रहेको छ?",
             "options": ["७८५ कि.मि.", "८५० कि.मि.", "८८५ कि.मि.", "९२० कि.मि."],
             "correct": 2
         },
         {
+            "category": "Geographical Status and Physical Features",
             "question": "नेपालको उत्तर-दक्षिण औसत चौडाइ कति रहेको छ?",
             "options": ["१५३ कि.मि.", "१७३ कि.मि.", "१९३ कि.मि.", "२१३ कि.मि."],
             "correct": 2
         },
         {
+            "category": "Geographical Status and Physical Features",
             "question": "नेपालको उत्तर-दक्षिण अधिकतम चौडाइ २४१ कि.मि. छ भने न्यूनतम चौडाइ कति छ?",
             "options": ["१२५ कि.मि.", "१३५ कि.मि.", "१४५ कि.मि.", "१५५ कि.मि."],
             "correct": 2
         },
         {
+            "category": "Geographical Status and Physical Features",
             "question": "नेपाल समुद्र सतहदेखि कति किलोमिटर टाढा छ?",
             "options": ["१०२६ कि.मि.", "११२६ कि.मि.", "१२२६ कि.मि.", "१३२६ कि.मि."],
             "correct": 1
         },
         {
+            "category": "Geographical Status and Physical Features",
             "question": "नेपालको प्रामाणिक समय कुन हिमाललाई आधार मानी निर्धारण गरिएको छ?",
             "options": ["सगरमाथा", "गौरीशंकर", "मनास्लु", "अन्नपूर्ण"],
             "correct": 1
         },
         {
+            "category": "Geographical Status and Physical Features",
             "question": "नेपालको सबभन्दा होचो भू-भाग कुन हो?",
             "options": ["झापाको केचनाकलन", "मोरङको विराटनगर", "धनुषाको मुसरनिया", "सुनसरीको इनरुवा"],
             "correct": 2
         },
         {
+            "category": "Geographical Status and Physical Features",
             "question": "विश्वकै सर्वोच्च चुचुरो सगरमाथा नेपालको कुन जिल्लामा रहेको छ?",
             "options": ["ताप्लेजुङ", "संखुवासभा", "सोलुखुम्बु", "दोलखा"],
             "correct": 2
@@ -885,11 +896,13 @@ const quizDatabase = {
     ],
     "Regional Classification": [
         {
+            "category": "Regional Classification",
             "question": "धरातलको आधारमा नेपाललाई कति भागमा विभाजन गरिएको छ?",
             "options": ["दुई", "तीन", "चार", "पाँच"],
             "correct": 1
         },
         {
+            "category": "Regional Classification",
             "question": "हिमाली प्रदेश कति उचाइमा अवस्थित छ?",
             "options": [
                 "१००० मिटरदेखि ५००० मिटरसम्म",
@@ -900,31 +913,37 @@ const quizDatabase = {
             "correct": 2
         },
         {
+            "category": "Regional Classification",
             "question": "नेपालका हिमाली जिल्ला कति छन्?",
             "options": ["१८", "२१", "२४", "२७"],
             "correct": 1
         },
         {
+            "category": "Regional Classification",
             "question": "म्याग्दी जिल्लालाई हिमाली जिल्लाको रुपमा कहिले वर्गीकरण गरिएको हो?",
             "options": ["वि.सं. २०७४", "वि.सं. २०७५", "वि.सं. २०७६", "वि.सं. २०७७"],
             "correct": 1
         },
         {
+            "category": "Regional Classification",
             "question": "पहाडी जिल्लाको संख्या कति रहेको छ?",
             "options": ["३०", "३२", "३५", "३८"],
             "correct": 2
         },
         {
+            "category": "Regional Classification",
             "question": "नेपालको कुन क्षेत्रलाई 'अन्न भण्डार' भनी चिनिन्छ?",
             "options": ["हिमाल", "पहाड", "तराई", "भित्री मधेश"],
             "correct": 2
         },
         {
+            "category": "Regional Classification",
             "question": "तराईका जिल्लाहरुको संख्या कति रहेको छ?",
             "options": ["१७", "२१", "२२", "२५"],
             "correct": 1
         },
         {
+            "category": "Regional Classification",
             "question": "भित्री मधेशमा पर्ने जिल्लाहरू कति छन्?",
             "options": ["५", "६", "७", "८"],
             "correct": 2
@@ -932,36 +951,43 @@ const quizDatabase = {
     ],
     "Water Resources and River Origins": [
         {
+            "category": "Water Resources and River Origins",
             "question": "नेपालमा विश्‍वको कुल जलस्रोतको कति भाग रहेको छ?",
             "options": ["२.७२ प्रतिशत", "३.२७ प्रतिशत", "१.२७ प्रतिशत", "२.२७ प्रतिशत"],
             "correct": 3
         },
         {
+            "category": "Water Resources and River Origins",
             "question": "कोशी नदीको औसत जलप्रवाह १५६४ क्युविक मिटर प्रति सेकेन्ड रहेको छ भने यसको लम्बाइ कति रहेको छ?",
             "options": ["९२० कि. मी.", "७२० कि. मी.", "८२० कि. मी.", "५२० कि. मी."],
             "correct": 1
         },
         {
+            "category": "Water Resources and River Origins",
             "question": "पश्चिम राप्ती नदीको उद्गमस्थल कहाँ हो?",
             "options": ["प्यूठानको स्वर्गद्वारी", "रोल्पाको महाभारत पर्वत", "सल्यानको चुरे", "दाङको चुरे"],
             "correct": 1
         },
         {
+            "category": "Water Resources and River Origins",
             "question": "कर्णाली नदीको उद्‍गम स्थल कहाँ रहेको छ?",
             "options": ["मुस्ताङ लेक", "तिब्बत", "धौलागिरी हिमाल", "अपि हिमाल"],
             "correct": 1
         },
         {
+            "category": "Water Resources and River Origins",
             "question": "कालीगण्डकी नदीको उद्‍गम स्थल कहाँ हो?",
             "options": ["मुस्ताङ लेक", "बुद्ध हिमाल", "तिब्बत", "गणेश हिमाल"],
             "correct": 0
         },
         {
+            "category": "Water Resources and River Origins",
             "question": "मेची नदीको उद्‍गम स्थल कहाँ रहेको छ?",
             "options": ["सिन्धुली गढी", "लाली खर्क", "दूधकुण्ड", "गौमुखी (प्युठान)"],
             "correct": 1
         },
         {
+            "category": "Water Resources and River Origins",
             "question": "कमला नदीको उद्‍गम स्थल कहाँ हो?",
             "options": ["महाभारत पर्वत", "सिन्धुली गढी", "चुरे डाँडा", "बागद्वार"],
             "correct": 1
@@ -969,41 +995,49 @@ const quizDatabase = {
     ],
     "Sanskrit and Alternative Names": [
         {
+            "category": "Sanskrit and Alternative Names",
             "question": "\"दुधमती\" भनेर पनि चिनिने नदी कुन हो?",
             "options": ["पश्चिम राप्ती", "पूर्वी राप्‍ती नदी", "बबई", "कर्मनाशा"],
             "correct": 1
         },
         {
+            "category": "Sanskrit and Alternative Names",
             "question": "अरुण नदीको संस्कृत नाम के हो?",
             "options": ["महाप्रभा", "शितप्रभा", "शुभश्रवा", "माण्डवी"],
             "correct": 0
         },
         {
+            "category": "Sanskrit and Alternative Names",
             "question": "मर्स्याङ्दी नदीलाई संस्कृतमा कुन नामले चिनिन्छ?",
             "options": ["महाप्रभा", "शितप्रभा", "शुक्लगंगा", "पञ्चेश्वरी"],
             "correct": 1
         },
         {
+            "category": "Sanskrit and Alternative Names",
             "question": "'शुक्लगंगा' वा 'सुवर्णसरिता' कुन नेपाली नदीका संस्कृत नाम हुन्?",
             "options": ["सुनकोशी", "कर्णाली", "सेतीगण्डकी", "त्रिशुली"],
             "correct": 2
         },
         {
+            "category": "Sanskrit and Alternative Names",
             "question": "सुनकोशी नदीको संस्कृत नाम के हो?",
             "options": ["हेमगंगा", "धर्मधारा", "कृष्णगण्डकी", "शुभश्रवा"],
             "correct": 3
         },
         {
+            "category": "Sanskrit and Alternative Names",
             "question": "झिमरुक नदीको संस्कृत नाम के हो?",
             "options": ["माण्डवी", "धर्मावती", "सूर्यवती", "रुद्रमती"],
             "correct": 1
         },
         {
+            "category": "Sanskrit and Alternative Names",
             "question": "धोबीखोलालाई संस्कृतमा कुन नामले चिनिन्छ?",
             "options": ["चम्पावती", "सत्यवाहिनी", "रुद्रमती", "धर्मधारा"],
             "correct": 2
         },
         {
+            "category": "Sanskrit and Alternative Names",
             "question": "तमोर नदीको संस्कृत नाम के हो?",
             "options": ["भद्रावती", "दुखःधी", "अचिरावती", "कृष्णगण्डकी"],
             "correct": 1
@@ -1011,21 +1045,25 @@ const quizDatabase = {
     ],
     "Hydropower and Technical Data": [
         {
+            "category": "Hydropower and Technical Data",
             "question": "कोशी नदीको विद्युत उत्पादन क्षमता कति रहेको छ?",
             "options": ["२१००० मे. वा.", "२२००० मे. वा.", "३२००० मे. वा.", "१५००० मे. वा."],
             "correct": 1
         },
         {
+            "category": "Hydropower and Technical Data",
             "question": "गण्डकी नदीको विद्युत उत्पादन क्षमता कति रहेको छ?",
             "options": ["२२००० मे. वा.", "३२००० मे. वा.", "२१००० मे. वा.", "२५००० मे. वा."],
             "correct": 2
         },
         {
+            "category": "Hydropower and Technical Data",
             "question": "कर्णाली नदीको विद्युत उत्पादन क्षमता कति रहेको छ?",
             "options": ["२१००० मे. वा.", "२२००० मे. वा.", "३२००० मे. वा.", "३५००० मे. वा."],
             "correct": 2
         },
         {
+            "category": "Hydropower and Technical Data",
             "question": "नेपालका नदीहरुबाट कति हेक्टर जमिनमा सिंचाइ सुविधा उपलब्ध हुन सक्छ?",
             "options": ["७० लाख हेक्टर", "७५ लाख हेक्टर", "८० लाख हेक्टर", "८५ लाख हेक्टर"],
             "correct": 2
@@ -1033,136 +1071,163 @@ const quizDatabase = {
     ],
     "Scientific Disciplines and Branches of Knowledge": [
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Anatomy?",
             "options": ["Study of internal structure of organisms", "Study of ancient writing", "Study of human races and cultures", "Study of the mind"],
             "correct": 0
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Anthropology?",
             "options": ["Study of humans, their origins, and societies", "Study of human history through artifacts", "Study of moral principles", "Study of aging"],
             "correct": 0
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Archaeology?",
             "options": ["Study of celestial bodies", "Study of human history through artifacts", "Study of ancient writing", "Study of mountains"],
             "correct": 1
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Astronomy?",
             "options": ["Study of celestial bodies (planets, stars, etc.)", "Study of the influence of stars on human affairs", "Study of the universe's origin and structure", "Study of time measurement"],
             "correct": 0
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Astrology?",
             "options": ["Study of celestial bodies", "Study of the universe's origin", "Study of the influence of stars on human affairs", "Study of sound"],
             "correct": 2
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Acoustics?",
             "options": ["Study of light", "Study of sound", "Study of matter and energy", "Study of time measurement"],
             "correct": 1
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Botany?",
             "options": ["Study of plants", "Study of trees", "Study of flowers", "Study of garden cultivation"],
             "correct": 0
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Biology?",
             "options": ["Study of bacteria", "Study of all living organisms", "Study of microorganisms", "Study of viruses"],
             "correct": 1
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Bacteriology?",
             "options": ["Study of bacteria", "Study of viruses", "Study of microorganisms", "Study of all living organisms"],
             "correct": 0
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Calligraphy?",
             "options": ["Study of ancient writing", "Art of beautiful handwriting", "Study of inscriptions", "Study of teaching"],
             "correct": 1
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Cosmology?",
             "options": ["Study of celestial bodies", "Study of the universe's origin and structure", "Study of matter and its changes", "Study of the Earth's physical structure"],
             "correct": 1
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Chemistry?",
             "options": ["Study of matter and energy", "Study of matter and its changes", "Study of metals and their properties", "Study of the Earth's physical structure"],
             "correct": 1
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Dendrology?",
             "options": ["Study of plants", "Study of trees", "Study of flowers", "Study of garden cultivation"],
             "correct": 1
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Ethics?",
             "options": ["Study of moral principles", "Study of the mind", "Study of teaching", "Study of human races and cultures"],
             "correct": 0
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Ethnology?",
             "options": ["Study of humans, their origins, and societies", "Study of human races and cultures", "Study of inscriptions", "Study of ancient writing"],
             "correct": 1
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Entomology?",
             "options": ["Study of insects", "Study of fish", "Study of birds", "Study of animals"],
             "correct": 0
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Eugenics?",
             "options": ["Study of improving the human species through genetics", "Study of female health", "Study of aging", "Study of diseases"],
             "correct": 0
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Epigraphy?",
             "options": ["Study of ancient writing", "Study of inscriptions", "Art of beautiful handwriting", "Study of coins or currency"],
             "correct": 1
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Floriculture?",
             "options": ["Study of plants", "Study of growing flowers", "Study of garden cultivation", "Study of trees"],
             "correct": 1
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Geology?",
             "options": ["Study of mountains", "Study of earthquakes", "Study of the Earth's physical structure", "Study of the universe's origin"],
             "correct": 2
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Gerontology?",
             "options": ["Study of aging", "Study of female health", "Study of diseases", "Study of body functions"],
             "correct": 0
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Gynecology?",
             "options": ["Study of female health", "Study of aging", "Study of body functions", "Study of diseases"],
             "correct": 0
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Gastronomy?",
             "options": ["Study of food and culture", "Study of the stomach", "Study of body functions", "Study of kidneys"],
             "correct": 0
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Horticulture?",
             "options": ["Study of plants", "Study of garden cultivation", "Study of growing flowers", "Study of trees"],
             "correct": 1
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Horology?",
             "options": ["Study of time measurement", "Study of sound", "Study of light", "Study of mountains"],
             "correct": 0
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Ichthyology?",
             "options": ["Study of fish", "Study of insects", "Study of birds", "Study of animals"],
             "correct": 0
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Microbiology?",
             "options": ["Study of bacteria", "Study of viruses", "Study of microorganisms", "Study of all living organisms"],
             "correct": 2
@@ -1173,46 +1238,55 @@ const quizDatabase = {
             "correct": 0
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Nephrology?",
             "options": ["Study of kidneys", "Study of the nervous system", "Study of teeth", "Study of body functions"],
             "correct": 0
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Neurology?",
             "options": ["Study of the mind", "Study of the nervous system", "Study of body functions", "Study of diseases"],
             "correct": 1
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Numismatics?",
             "options": ["Study/collection of coins or currency", "Study of inscriptions", "Study of ancient writing", "Study of time measurement"],
             "correct": 0
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Odontology?",
             "options": ["Study of teeth", "Study of kidneys", "Study of the nervous system", "Study of diseases"],
             "correct": 0
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Ornithology?",
             "options": ["Study of birds", "Study of fish", "Study of insects", "Study of animals"],
             "correct": 0
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Optics?",
             "options": ["Study of light", "Study of sound", "Study of matter and energy", "Study of time measurement"],
             "correct": 0
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Orology?",
             "options": ["Study of mountains", "Study of the Earth's physical structure", "Study of earthquakes", "Study of the universe's origin"],
             "correct": 0
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Paleography?",
             "options": ["Study of ancient writing", "Study of inscriptions", "Art of beautiful handwriting", "Study of human history through artifacts"],
             "correct": 0
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Physiology?",
             "options": ["Study of body functions", "Study of diseases", "Study of the mind", "Study of internal structure of organisms"],
             "correct": 0
@@ -1223,46 +1297,55 @@ const quizDatabase = {
             "correct": 0
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Psychology?",
             "options": ["Study of the mind", "Study of the nervous system", "Study of moral principles", "Study of teaching"],
             "correct": 0
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Pedagogy?",
             "options": ["Study of teaching", "Study of the mind", "Study of moral principles", "Study of ancient writing"],
             "correct": 0
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Pisciculture?",
             "options": ["Study of fish", "Breeding and rearing of fish", "Study of silk production", "Study of garden cultivation"],
             "correct": 1
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Physics?",
             "options": ["Study of matter and energy", "Study of matter and its changes", "Study of light", "Study of sound"],
             "correct": 0
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Seismology?",
             "options": ["Study of earthquakes", "Study of mountains", "Study of the Earth's physical structure", "Study of sound"],
             "correct": 0
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Sericulture?",
             "options": ["Study of silk production", "Breeding and rearing of fish", "Study of garden cultivation", "Study of growing flowers"],
             "correct": 0
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Toxicology?",
             "options": ["Study of poisons", "Study of diseases", "Study of viruses", "Study of bacteria"],
             "correct": 0
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Virology?",
             "options": ["Study of viruses", "Study of bacteria", "Study of microorganisms", "Study of diseases"],
             "correct": 0
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Zoology?",
             "options": ["Study of animals", "Study of all living organisms", "Study of birds", "Study of fish"],
             "correct": 0
