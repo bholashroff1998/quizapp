@@ -1268,84 +1268,213 @@ const quizDatabase = {
             "correct": 0
         }
     ],
-  "Scientific and Measurement Instruments": [
-    { "question": "Which instrument measures atmospheric pressure?", "options": ["Anemometer", "Barometer", "Hygrometer", "Thermometer"], "correct": 1 },
-    { "question": "Which device measures temperature?", "options": ["Barometer", "Calorimeter", "Thermometer", "Seismograph"], "correct": 2 },
-    { "question": "Which instrument measures humidity?", "options": ["Manometer", "Hygrometer", "Barometer", "Rain Gauge"], "correct": 1 },
-    { "question": "Which device measures wind speed?", "options": ["Barograph", "Wind Vane", "Anemometer", "Hydrometer"], "correct": 2 },
-    { "question": "Which device shows wind direction?", "options": ["Compass", "Wind Vane", "Rain Gauge", "Thermometer"], "correct": 1 },
-    { "question": "Which device measures rainfall?", "options": ["Anemometer", "Hydrometer", "Rain Gauge", "Hygrometer"], "correct": 2 },
-    { "question": "Which device measures light intensity?", "options": ["Calorimeter", "Photometer", "Lux Meter", "Barometer"], "correct": 2 },
-    { "question": "Which instrument measures sound intensity?", "options": ["Geiger Counter", "Hydrometer", "Lux Meter", "Sound Level Meter"], "correct": 3 },
-    { "question": "Which instrument measures earthquake intensity?", "options": ["Calorimeter", "Barograph", "Seismograph", "Tachometer"], "correct": 2 },
-    { "question": "Which device measures liquid density?", "options": ["Colorimeter", "Hydrometer", "Altimeter", "Manometer"], "correct": 1 },
-    { "question": "Which instrument measures gas pressure?", "options": ["Voltmeter", "Barometer", "Manometer", "Colorimeter"], "correct": 2 },
-    { "question": "Which instrument measures heat energy?", "options": ["Thermometer", "Calorimeter", "Hydrometer", "Manometer"], "correct": 1 },
-    { "question": "Which instrument measures the altitude of the Pole Star?", "options": ["Quadrant", "Sextant", "Clinometer", "Astrolabe"], "correct": 1 },
-    { "question": "Which instrument measures small lengths?", "options": ["Vernier Caliper", "Telescope", "Barometer", "Hydrometer"], "correct": 0 },
-    { "question": "Which instrument measures very small thickness?", "options": ["Manometer", "Micrometer Screw Gauge", "Vernier Caliper", "Calorimeter"], "correct": 1 },
-    { "question": "Which device measures current?", "options": ["Voltmeter", "Multimeter", "Ammeter", "Ohmmeter"], "correct": 2 },
-    { "question": "Which device measures voltage?", "options": ["Galvanometer", "Voltmeter", "Multimeter", "Ammeter"], "correct": 1 },
-    { "question": "Which device measures resistance?", "options": ["Voltmeter", "Ammeter", "Hydrometer", "Ohmmeter"], "correct": 3 },
-    { "question": "Which device measures rotational speed?", "options": ["Speedometer", "Altimeter", "Tachometer", "Odometer"], "correct": 2 },
-    { "question": "Which device measures speed of a vehicle?", "options": ["Altimeter", "Speedometer", "Odometer", "Tachometer"], "correct": 1 },
-    { "question": "Which device measures distance traveled by a vehicle?", "options": ["Compass", "Speedometer", "Altimeter", "Odometer"], "correct": 3 },
-    { "question": "Which device measures altitude?", "options": ["Odometer", "Altimeter", "Manometer", "Tachometer"], "correct": 1 },
-    { "question": "Which device detects electric charge?", "options": ["X-ray Machine", "Ammeter", "Electroscope", "Manometer"], "correct": 2 },
-    { "question": "Which device detects radiation?", "options": ["Hydrometer", "Barometer", "Geiger Counter", "Colorimeter"], "correct": 2 },
-    { "question": "Which device measures radioactivity?", "options": ["Microscope", "Geiger-Muller Tube", "Manometer", "Telescope"], "correct": 1 },
-    { "question": "Which device measures pH of liquids?", "options": ["Manometer", "pH Meter", "Hydrometer", "Colorimeter"], "correct": 1 },
-    { "question": "Which instrument separates light into its spectrum?", "options": ["Periscope", "Microscope", "Telescope", "Spectrometer"], "correct": 3 },
-    { "question": "Which instrument measures absorbance of light by liquids?", "options": ["Colorimeter", "Altimeter", "Micrometer", "Barometer"], "correct": 0 },
-    { "question": "Which device is used for continuous pressure recording?", "options": ["Tachometer", "Seismograph", "Barograph", "Anemometer"], "correct": 2 },
-    { "question": "Which device continuously records temperature?", "options": ["Thermometer", "Thermograph", "Hydrometer", "Barograph"], "correct": 1 },
-    { "question": "Which device records the direction of a moving object?", "options": ["Compass", "Speedometer", "Telescope", "Galvanometer"], "correct": 0 },
-    { "question": "Which device measures angular elevation of objects?", "options": ["Sextant", "Quadrant", "Clinometer", "Astrolabe"], "correct": 2 },
-    { "question": "Which device measures ionizing radiation?", "options": ["Lux Meter", "Dosimeter", "Barometer", "Colorimeter"], "correct": 1 },
-    { "question": "Which device measures refractive index?", "options": ["Telescope", "Refractometer", "Microscope", "Spectrometer"], "correct": 1 },
-    { "question": "Which device measures sugar concentration in liquids?", "options": ["Refractometer", "Hydrometer", "Calorimeter", "Manometer"], "correct": 0 },
-    { "question": "Which instrument measures unknown resistance using a bridge?", "options": ["Spectrometer", "Wheatstone Bridge", "Voltmeter", "Ammeter"], "correct": 1 },
-    { "question": "Which device measures magnetic field strength?", "options": ["Barometer", "Galvanometer", "Magnetometer", "Voltmeter"], "correct": 2 },
-    { "question": "Which device is used for astronomical observations?", "options": ["Periscope", "Endoscope", "Telescope", "Microscope"], "correct": 2 },
-    { "question": "Which device magnifies tiny objects?", "options": ["Periscope", "Microscope", "Telescope", "Endoscope"], "correct": 1 },
-    { "question": "Which device is used to see objects behind obstacles?", "options": ["Sextant", "Thermometer", "Periscope", "Microscope"], "correct": 2 },
-    { "question": "Which device is used to examine internal organs?", "options": ["Stethoscope", "X-ray Machine", "Endoscope", "Telescope"], "correct": 2 },
-    { "question": "Which instrument is used to take X-ray images?", "options": ["Ultrasound", "MRI Scanner", "X-ray Machine", "Endoscope"], "correct": 2 },
-    { "question": "Which machine uses magnetism to scan the body?", "options": ["Ultrasound", "CT Scanner", "MRI Scanner", "Endoscope"], "correct": 2 },
-    { "question": "Which device uses sound waves to image inside the body?", "options": ["Ultrasound Scanner", "Endoscope", "MRI Scanner", "X-ray Machine"], "correct": 0 },
-    { "question": "Which device measures blood pressure?", "options": ["ECG", "Glucometer", "Sphygmomanometer", "Stethoscope"], "correct": 2 },
-    { "question": "Which device is used to listen to heart and lungs?", "options": ["X-ray", "Manometer", "Stethoscope", "Endoscope"], "correct": 2 },
-    { "question": "Which device measures blood sugar?", "options": ["Sphygmomanometer", "Colorimeter", "Glucometer", "Manometer"], "correct": 2 },
-    { "question": "Which device records heart activity?", "options": ["X-ray", "ECG Machine", "MRI", "EEG Machine"], "correct": 1 },
-    { "question": "Which device records brain activity?", "options": ["EMG Machine", "ECG Machine", "EEG Machine", "X-ray"], "correct": 2 },
-    { "question": "Which device records muscle activity?", "options": ["ECG Machine", "EEG Machine", "Barometer", "EMG Machine"], "correct": 3 },
-    { "question": "Which device measures lung capacity?", "options": ["Glucometer", "Endoscope", "Spirometer", "Thermometer"], "correct": 2 },
-    { "question": "Which device sterilizes lab equipment?", "options": ["Microscope", "Incubator", "Autoclave", "Spectrometer"], "correct": 2 },
-    { "question": "Which device is used to grow microorganisms?", "options": ["Telescope", "Microscope", "Incubator", "Autoclave"], "correct": 2 },
-    { "question": "Which device spins samples at high speed?", "options": ["Spectrometer", "Microscope", "Centrifuge", "Incubator"], "correct": 2 },
-    { "question": "Which device measures moisture in soil?", "options": ["Lux Meter", "Soil Moisture Meter", "Hydrometer", "Manometer"], "correct": 1 },
-    { "question": "Which device measures soil pH?", "options": ["Manometer", "Soil pH Meter", "Hydrometer", "Colorimeter"], "correct": 1 },
-    { "question": "Which device measures area on a map?", "options": ["Calorimeter", "Planimeter", "Hygrometer", "Tachometer"], "correct": 1 },
-    { "question": "Which device measures angles or slopes?", "options": ["Compass", "Sextant", "Quadrant", "Clinometer"], "correct": 3 },
-    { "question": "Which device finds direction using Earth's magnetic field?", "options": ["Sextant", "Barometer", "Compass", "Astrolabe"], "correct": 2 },
-    { "question": "Which instrument measures distance using laser?", "options": ["Laser Rangefinder", "Speedometer", "Odometer", "Anemometer"], "correct": 0 },
-    { "question": "Which device detects metal?", "options": ["Metal Detector", "Geiger Counter", "Magnetometer", "Ammeter"], "correct": 0 },
-    { "question": "Which device measures torque?", "options": ["Tachometer", "Dynamometer", "Torque Wrench", "Manometer"], "correct": 2 },
-    { "question": "Which device measures electrical power?", "options": ["Ammeter", "Voltmeter", "Wattmeter", "Ohmmeter"], "correct": 2 },
-    { "question": "Which device measures frequency of signals?", "options": ["Ammeter", "Oscilloscope", "Voltmeter", "Frequency Counter"], "correct": 3 },
-    { "question": "Which device displays electrical waveforms?", "options": ["Multimeter", "Colorimeter", "Oscilloscope", "Voltmeter"], "correct": 2 },
-    { "question": "Which device measures dissolved oxygen in water?", "options": ["Lux Meter", "Hydrometer", "DO Meter", "Manometer"], "correct": 2 },
-    { "question": "Which device measures salinity?", "options": ["Refractometer", "Hydrometer", "Salinometer", "Manometer"], "correct": 2 },
-    { "question": "Which device measures turbidity of liquids?", "options": ["Hydrometer", "Manometer", "Colorimeter", "Turbidity Meter"], "correct": 3 },
-    { "question": "Which device measures chlorine in water?", "options": ["Hydrometer", "pH Meter", "Calorimeter", "Chlorine Meter"], "correct": 3 },
-    { "question": "Which device measures pollution in air?", "options": ["Anemometer", "Air Quality Monitor", "Barometer", "Rain Gauge"], "correct": 1 },
-    { "question": "Which device measures carbon dioxide levels?", "options": ["Manometer", "Hydrometer", "CO2 Meter", "Colorimeter"], "correct": 2 },
-    { "question": "Which instrument measures alcohol content?", "options": ["Hydrometer", "Spectrometer", "Manometer", "Alcoholmeter"], "correct": 3 },
-    { "question": "Which instrument measures smoke density?", "options": ["Manometer", "Lux Meter", "Smoke Density Meter", "Sound Meter"], "correct": 2 },
-    { "question": "Which device detects leaks in pipes?", "options": ["Hydrometer", "Manometer", "Thermometer", "Leak Detector"], "correct": 3 },
-    { "question": "Which device measures viscosity?", "options": ["Barometer", "Hydrometer", "Calorimeter", "Viscometer"], "correct": 3 },
-    { "question": "Which device measures hardness of materials?", "options": ["Hardness Tester", "Torque Wrench", "Micrometer", "Vernier Caliper"], "correct": 0 },
-    { "question": "Which device measures thickness of coatings?", "options": ["Hydrometer", "Coating Thickness Gauge", "Micrometer", "Manometer"], "correct": 1 }
+  "Weather and Environmental Instruments": [
+    {
+      "category": "Weather and Environmental Instruments",
+      "question": "Which instrument measures atmospheric pressure?",
+      "options": ["Hygrometer", "Anemometer", "Barometer", "Thermometer"],
+      "correctAnswer": 2
+    },
+    {
+      "category": "Weather and Environmental Instruments",
+      "question": "Which instrument measures humidity?",
+      "options": ["Barometer", "Hygrometer", "Manometer", "Rain Gauge"],
+      "correctAnswer": 1
+    },
+    {
+      "category": "Weather and Environmental Instruments",
+      "question": "Which device measures wind speed?",
+      "options": ["Hydrometer", "Wind Vane", "Barograph", "Anemometer"],
+      "correctAnswer": 3
+    },
+    {
+      "category": "Weather and Environmental Instruments",
+      "question": "Which device shows wind direction?",
+      "options": ["Wind Vane", "Compass", "Rain Gauge", "Thermometer"],
+      "correctAnswer": 0
+    },
+    {
+      "category": "Weather and Environmental Instruments",
+      "question": "Which device measures rainfall?",
+      "options": ["Anemometer", "Rain Gauge", "Hydrometer", "Hygrometer"],
+      "correctAnswer": 1
+    },
+    {
+      "category": "Weather and Environmental Instruments",
+      "question": "Which device is used for continuous pressure recording?",
+      "options": ["Tachometer", "Barograph", "Seismograph", "Anemometer"],
+      "correctAnswer": 1
+    },
+    {
+      "category": "Weather and Environmental Instruments",
+      "question": "Which device continuously records temperature?",
+      "options": ["Thermograph", "Thermometer", "Hydrometer", "Barograph"],
+      "correctAnswer": 0
+    }
+  ],
+  "Physics and General Measurement": [
+    {
+      "category": "Physics and General Measurement",
+      "question": "Which device measures temperature?",
+      "options": ["Calorimeter", "Barometer", "Seismograph", "Thermometer"],
+      "correctAnswer": 3
+    },
+    {
+      "category": "Physics and General Measurement",
+      "question": "Which device measures light intensity?",
+      "options": ["Lux Meter", "Calorimeter", "Photometer", "Barometer"],
+      "correctAnswer": 0
+    },
+    {
+      "category": "Physics and General Measurement",
+      "question": "Which instrument measures sound intensity?",
+      "options": ["Hydrometer", "Sound Level Meter", "Geiger Counter", "Lux Meter"],
+      "correctAnswer": 1
+    },
+    {
+      "category": "Physics and General Measurement",
+      "question": "Which device measures liquid density?",
+      "options": ["Hydrometer", "Colorimeter", "Altimeter", "Manometer"],
+      "correctAnswer": 0
+    },
+    {
+      "category": "Physics and General Measurement",
+      "question": "Which instrument measures gas pressure?",
+      "options": ["Voltmeter", "Manometer", "Barometer", "Colorimeter"],
+      "correctAnswer": 1
+    },
+    {
+      "category": "Physics and General Measurement",
+      "question": "Which instrument measures heat energy?",
+      "options": ["Thermometer", "Hydrometer", "Calorimeter", "Manometer"],
+      "correctAnswer": 2
+    },
+    {
+      "category": "Physics and General Measurement",
+      "question": "Which instrument measures small lengths?",
+      "options": ["Vernier Caliper", "Telescope", "Barometer", "Hydrometer"],
+      "correctAnswer": 0
+    },
+    {
+      "category": "Physics and General Measurement",
+      "question": "Which instrument measures very small thickness?",
+      "options": ["Manometer", "Vernier Caliper", "Micrometer Screw Gauge", "Calorimeter"],
+      "correctAnswer": 2
+    },
+    {
+      "category": "Physics and General Measurement",
+      "question": "Which device measures viscosity?",
+      "options": ["Hydrometer", "Viscometer", "Barometer", "Calorimeter"],
+      "correctAnswer": 1
+    }
+  ],
+  "Electrical and Electronics": [
+    {
+      "category": "Electrical and Electronics",
+      "question": "Which device measures current?",
+      "options": ["Voltmeter", "Ammeter", "Multimeter", "Ohmmeter"],
+      "correctAnswer": 1
+    },
+    {
+      "category": "Electrical and Electronics",
+      "question": "Which device measures voltage?",
+      "options": ["Galvanometer", "Multimeter", "Voltmeter", "Ammeter"],
+      "correctAnswer": 2
+    },
+    {
+      "category": "Electrical and Electronics",
+      "question": "Which device measures resistance?",
+      "options": ["Voltmeter", "Ohmmeter", "Ammeter", "Hydrometer"],
+      "correctAnswer": 1
+    },
+    {
+      "category": "Electrical and Electronics",
+      "question": "Which device detects electric charge?",
+      "options": ["Ammeter", "Electroscope", "X-ray Machine", "Manometer"],
+      "correctAnswer": 1
+    },
+    {
+      "category": "Electrical and Electronics",
+      "question": "Which device measures electrical power?",
+      "options": ["Ammeter", "Wattmeter", "Voltmeter", "Ohmmeter"],
+      "correctAnswer": 1
+    },
+    {
+      "category": "Electrical and Electronics",
+      "question": "Which device displays electrical waveforms?",
+      "options": ["Multimeter", "Oscilloscope", "Colorimeter", "Voltmeter"],
+      "correctAnswer": 1
+    }
+  ],
+  "Medical and Laboratory Instruments": [
+    {
+      "category": "Medical and Laboratory Instruments",
+      "question": "Which device measures blood pressure?",
+      "options": ["ECG", "Sphygmomanometer", "Glucometer", "Stethoscope"],
+      "correctAnswer": 1
+    },
+    {
+      "category": "Medical and Laboratory Instruments",
+      "question": "Which device is used to listen to heart and lungs?",
+      "options": ["Stethoscope", "X-ray", "Manometer", "Endoscope"],
+      "correctAnswer": 0
+    },
+    {
+      "category": "Medical and Laboratory Instruments",
+      "question": "Which device records heart activity?",
+      "options": ["ECG Machine", "X-ray", "MRI", "EEG Machine"],
+      "correctAnswer": 0
+    },
+    {
+      "category": "Medical and Laboratory Instruments",
+      "question": "Which device records brain activity?",
+      "options": ["EMG Machine", "EEG Machine", "ECG Machine", "X-ray"],
+      "correctAnswer": 1
+    },
+    {
+      "category": "Medical and Laboratory Instruments",
+      "question": "Which device measures lung capacity?",
+      "options": ["Glucometer", "Spirometer", "Endoscope", "Thermometer"],
+      "correctAnswer": 1
+    },
+    {
+      "category": "Medical and Laboratory Instruments",
+      "question": "Which device spins samples at high speed?",
+      "options": ["Spectrometer", "Centrifuge", "Microscope", "Incubator"],
+      "correctAnswer": 1
+    },
+    {
+      "category": "Medical and Laboratory Instruments",
+      "question": "Which device is used to examine internal organs?",
+      "options": ["Stethoscope", "Endoscope", "X-ray Machine", "Telescope"],
+      "correctAnswer": 1
+    }
+  ],
+  "Navigation and Earth Science": [
+    {
+      "category": "Navigation and Earth Science",
+      "question": "Which instrument measures earthquake intensity?",
+      "options": ["Calorimeter", "Seismograph", "Barograph", "Tachometer"],
+      "correctAnswer": 1
+    },
+    {
+      "category": "Navigation and Earth Science",
+      "question": "Which device measures altitude?",
+      "options": ["Altimeter", "Odometer", "Manometer", "Tachometer"],
+      "correctAnswer": 0
+    },
+    {
+      "category": "Navigation and Earth Science",
+      "question": "Which device measures distance traveled by a vehicle?",
+      "options": ["Compass", "Odometer", "Speedometer", "Altimeter"],
+      "correctAnswer": 1
+    },
+    {
+      "category": "Navigation and Earth Science",
+      "question": "Which device finds direction using Earth's magnetic field?",
+      "options": ["Sextant", "Compass", "Barometer", "Astrolabe"],
+      "correctAnswer": 1
+    }
   ],
   "The Magna Carta and the Foundations of Democracy": [
     {
