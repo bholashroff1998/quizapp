@@ -3,87 +3,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Master - Track Your Progress</title>
+    <title>QuizMaster - Professional Quiz Platform</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="app-container">
-        <!-- Sidebar Drawer -->
-        <div id="drawer" class="drawer">
+        <!-- Professional Sidebar Drawer -->
+        <aside id="drawer" class="drawer">
             <div class="drawer-header">
-                <h2>Categories</h2>
-                <button class="drawer-close" onclick="toggleDrawer()">✕</button>
+                <div class="drawer-logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>QuizMaster</span>
+                </div>
+                <button class="drawer-close" onclick="toggleDrawer()" aria-label="Close menu">
+                    <i class="fas fa-times"></i>
+                </button>
             </div>
-            <div id="drawerCategoryList" class="drawer-category-list">
-                <!-- Categories will be populated here -->
+            
+            <!-- User Profile Section in Drawer -->
+            <div class="drawer-user-section">
+                <div class="drawer-user-avatar" id="drawerUserAvatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="drawer-user-info">
+                    <div class="drawer-user-name" id="drawerUserName">Guest User</div>
+                    <div class="drawer-user-stats" id="drawerUserStats">No quizzes yet</div>
+                </div>
+                <button class="drawer-edit-btn" onclick="showUserModal()" title="Edit Profile" aria-label="Edit Profile">
+                    <i class="fas fa-pen"></i>
+                </button>
             </div>
-        </div>
+
+            <!-- Quick Stats -->
+            <div class="drawer-quick-stats">
+                <div class="quick-stat-item">
+                    <i class="fas fa-trophy"></i>
+                    <div class="quick-stat-content">
+                        <span class="quick-stat-value" id="drawerTotalScore">0</span>
+                        <span class="quick-stat-label">Total Score</span>
+                    </div>
+                </div>
+                <div class="quick-stat-item">
+                    <i class="fas fa-chart-line"></i>
+                    <div class="quick-stat-content">
+                        <span class="quick-stat-value" id="drawerAccuracy">0%</span>
+                        <span class="quick-stat-label">Accuracy</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="drawer-navigation">
+                <button class="drawer-nav-btn" id="homeNavBtn" onclick="navigateToHome()">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </button>
+                <button class="drawer-nav-btn" id="dashboardNavBtn" onclick="navigateToDashboard()">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Dashboard</span>
+                </button>
+                <button class="drawer-nav-btn" onclick="showQuizHistory()">
+                    <i class="fas fa-history"></i>
+                    <span>Quiz History</span>
+                </button>
+            </nav>
+
+            <!-- Categories Section -->
+            <div class="drawer-section">
+                <h3 class="drawer-section-title">
+                    <i class="fas fa-list"></i>
+                    Quiz Categories
+                </h3>
+                <div id="drawerCategoryList" class="drawer-category-list">
+                    <!-- Categories will be populated here -->
+                </div>
+            </div>
+
+            <!-- Settings -->
+            <div class="drawer-footer">
+                <button class="drawer-settings-btn" onclick="showUserModal()">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </button>
+            </div>
+        </aside>
 
         <!-- Overlay -->
         <div id="drawerOverlay" class="drawer-overlay" onclick="toggleDrawer()"></div>
 
         <!-- Main Container -->
         <div class="main-wrapper">
-            <!-- Header -->
+            <!-- Professional Header -->
             <header class="header">
                 <div class="header-content">
-                    <button class="menu-btn" onclick="toggleDrawer()">☰</button>
-                    <div class="header-title">
-                        <h1 class="logo">Quiz<span class="logo-accent">Master</span></h1>
-                        <p class="user-name" id="userName">Guest User</p>
-                    </div>
-                    <div class="header-stats">
-                        <div class="stat-item">
-                            <span class="stat-label">Total Score</span>
-                            <span class="stat-value" id="totalScoreStat">0</span>
+                    <div class="header-left">
+                        <button class="menu-btn" onclick="toggleDrawer()" aria-label="Open menu">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <div class="header-title">
+                            <h1 class="logo">
+                                <i class="fas fa-graduation-cap"></i>
+                                Quiz<span class="logo-accent">Master</span>
+                            </h1>
                         </div>
+                    </div>
+                    <div class="header-right">
+                        <div class="header-stats">
+                            <div class="stat-item">
+                                <i class="fas fa-award"></i>
+                                <div class="stat-content">
+                                    <span class="stat-value" id="totalScoreStat">0</span>
+                                    <span class="stat-label">Score</span>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-bullseye"></i>
+                                <div class="stat-content">
+                                    <span class="stat-value" id="accuracyStat">0%</span>
+                                    <span class="stat-label">Accuracy</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="profile-btn" onclick="showUserModal()" aria-label="User profile">
+                            <i class="fas fa-user-circle"></i>
+                        </button>
                     </div>
                 </div>
             </header>
 
             <!-- Main Content -->
             <main class="main-content">
-                <!-- Dashboard Screen -->
-                <div id="dashboardScreen" class="screen active">
-                    <div class="dashboard-container">
-                        <!-- User Welcome Card -->
-                        <div class="user-card">
-                            <div class="user-avatar" id="userAvatar">👤</div>
-                            <div class="user-info">
-                                <h2 id="welcomeName">Welcome, Guest!</h2>
-                                <p id="userStats">No quizzes completed yet</p>
-                            </div>
-                            <button class="btn btn-secondary" onclick="showUserModal()">Edit Profile</button>
+                <!-- Home Screen - Categories Only -->
+                <div id="homeScreen" class="screen active">
+                    <div class="home-container">
+                        <div class="welcome-section">
+                            <h1 class="welcome-title">
+                                <i class="fas fa-graduation-cap"></i>
+                                Welcome to QuizMaster
+                            </h1>
+                            <p class="welcome-subtitle" id="welcomeMessage">Select a category to start your learning journey</p>
                         </div>
 
-                        <!-- Overall Progress -->
-                        <div class="progress-card">
-                            <h3>Overall Progress</h3>
-                            <div class="overall-stats">
-                                <div class="stat-box">
-                                    <span class="stat-number" id="totalQuestionsAnswered">0</span>
-                                    <span class="stat-text">Questions Answered</span>
-                                </div>
-                                <div class="stat-box">
-                                    <span class="stat-number" id="totalCorrectAnswers">0</span>
-                                    <span class="stat-text">Correct Answers</span>
-                                </div>
-                                <div class="stat-box">
-                                    <span class="stat-number" id="overallPercentage">0%</span>
-                                    <span class="stat-text">Accuracy</span>
-                                </div>
-                            </div>
-                            <div class="global-progress-bar">
-                                <div id="globalProgressFill" class="progress-fill"></div>
-                            </div>
-                            <p class="progress-text" id="progressText">Complete quizzes to track your overall progress</p>
-                        </div>
-
-                        <!-- Categories Progress -->
+                        <!-- Categories Section -->
                         <div class="categories-section">
-                            <h3>Category Progress</h3>
+                            <div class="section-header">
+                                <h3>
+                                    <i class="fas fa-folder-open"></i>
+                                    Available Quiz Categories
+                                </h3>
+                                <p>Choose your topic and test your knowledge</p>
+                            </div>
                             <div id="categoriesGrid" class="categories-grid">
                                 <!-- Category cards will be populated here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dashboard Screen - Progress Overview -->
+                <div id="dashboardScreen" class="screen">
+                    <div class="dashboard-container">
+                        <!-- Overall Progress Card -->
+                        <div class="progress-overview">
+                            <div class="overview-header">
+                                <h2>
+                                    <i class="fas fa-chart-bar"></i>
+                                    Your Progress Overview
+                                </h2>
+                                <p id="dashboardMessage">Track your learning progress and achievements</p>
+                            </div>
+                            <div class="overall-stats">
+                                <div class="stat-box">
+                                    <i class="fas fa-question-circle"></i>
+                                    <div class="stat-box-content">
+                                        <span class="stat-number" id="totalQuestionsAnswered">0</span>
+                                        <span class="stat-text">Questions Answered</span>
+                                    </div>
+                                </div>
+                                <div class="stat-box">
+                                    <i class="fas fa-check-circle"></i>
+                                    <div class="stat-box-content">
+                                        <span class="stat-number" id="totalCorrectAnswers">0</span>
+                                        <span class="stat-text">Correct Answers</span>
+                                    </div>
+                                </div>
+                                <div class="stat-box">
+                                    <i class="fas fa-percentage"></i>
+                                    <div class="stat-box-content">
+                                        <span class="stat-number" id="overallPercentage">0%</span>
+                                        <span class="stat-text">Overall Accuracy</span>
+                                    </div>
+                                </div>
+                                <div class="stat-box">
+                                    <i class="fas fa-clipboard-check"></i>
+                                    <div class="stat-box-content">
+                                        <span class="stat-number" id="totalQuizzesTaken">0</span>
+                                        <span class="stat-text">Quizzes Completed</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="global-progress-wrapper">
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar-label">
+                                        <span>Overall Progress</span>
+                                        <span id="progressPercentageLabel">0%</span>
+                                    </div>
+                                    <div class="global-progress-bar">
+                                        <div id="globalProgressFill" class="progress-fill"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Category Progress Details -->
+                        <div class="categories-section">
+                            <div class="section-header">
+                                <h3>
+                                    <i class="fas fa-chart-line"></i>
+                                    Category Performance
+                                </h3>
+                                <p>Detailed breakdown of your progress in each category</p>
+                            </div>
+                            <div id="dashboardCategoriesGrid" class="categories-grid">
+                                <!-- Category progress cards will be populated here -->
                             </div>
                         </div>
                     </div>
@@ -92,21 +235,37 @@
                 <!-- Quiz Screen -->
                 <div id="quizScreen" class="screen">
                     <div class="quiz-container">
-                        <!-- Progress Bar -->
+                        <!-- Quiz Header -->
+                        <div class="quiz-header">
+                            <button class="back-btn" onclick="backToHome()">
+                                <i class="fas fa-arrow-left"></i>
+                                <span>Back to Home</span>
+                            </button>
+                            <div class="quiz-info">
+                                <span class="category-badge" id="categoryTag">
+                                    <i class="fas fa-tag"></i>
+                                    <span id="categoryName"></span>
+                                </span>
+                                <span class="score-badge">
+                                    <i class="fas fa-star"></i>
+                                    Score: <span id="scoreDisplay">0</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Progress Section -->
                         <div class="progress-section">
                             <div class="progress-info">
                                 <span id="questionNumber" class="question-number">Question 1 of 10</span>
                                 <span id="progressPercentage" class="progress-percentage">0%</span>
-                                <span id="scoreDisplay" class="score-display">Score: 0</span>
                             </div>
                             <div class="progress-bar">
                                 <div id="progressFill" class="progress-fill"></div>
                             </div>
                         </div>
 
-                        <!-- Question -->
+                        <!-- Question Section -->
                         <div class="question-section">
-                            <p id="categoryTag" class="category-tag"></p>
                             <h2 id="questionText" class="question-text"></h2>
                         </div>
 
@@ -115,9 +274,14 @@
 
                         <!-- Navigation -->
                         <div class="navigation-buttons">
-                            <button class="btn btn-secondary" onclick="backToDashboard()">← Back</button>
-                            <button id="prevBtn" class="btn btn-secondary" onclick="previousQuestion()" style="display: none;">← Previous</button>
-                            <button id="nextBtn" class="btn btn-primary" onclick="nextQuestion()">Next →</button>
+                            <button id="prevBtn" class="btn btn-secondary" onclick="previousQuestion()" style="display: none;">
+                                <i class="fas fa-chevron-left"></i>
+                                Previous
+                            </button>
+                            <button id="nextBtn" class="btn btn-primary" onclick="nextQuestion()">
+                                Next
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -125,29 +289,56 @@
                 <!-- Results Screen -->
                 <div id="resultsScreen" class="screen">
                     <div class="results-card">
-                        <div id="resultIcon" class="result-icon"></div>
-                        <h2 id="resultTitle" class="result-title"></h2>
+                        <div class="result-header">
+                            <div id="resultIcon" class="result-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <h2 id="resultTitle" class="result-title">Quiz Completed!</h2>
+                            <p id="resultMessage" class="result-message"></p>
+                        </div>
                         
                         <div class="score-breakdown">
                             <div class="score-item">
-                                <span class="score-label">Total Score</span>
-                                <span id="finalScore" class="score-value">0/0</span>
+                                <i class="fas fa-check-double"></i>
+                                <div class="score-item-content">
+                                    <span class="score-label">Final Score</span>
+                                    <span id="finalScore" class="score-value">0/0</span>
+                                </div>
                             </div>
                             <div class="score-item">
-                                <span class="score-label">Percentage</span>
-                                <span id="finalPercentage" class="score-value">0%</span>
+                                <i class="fas fa-percent"></i>
+                                <div class="score-item-content">
+                                    <span class="score-label">Accuracy</span>
+                                    <span id="finalPercentage" class="score-value">0%</span>
+                                </div>
                             </div>
                             <div class="score-item">
-                                <span class="score-label">Correct Answers</span>
-                                <span id="correctCount" class="score-value">0</span>
+                                <i class="fas fa-thumbs-up"></i>
+                                <div class="score-item-content">
+                                    <span class="score-label">Correct</span>
+                                    <span id="correctCount" class="score-value">0</span>
+                                </div>
+                            </div>
+                            <div class="score-item">
+                                <i class="fas fa-thumbs-down"></i>
+                                <div class="score-item-content">
+                                    <span class="score-label">Incorrect</span>
+                                    <span id="incorrectCount" class="score-value">0</span>
+                                </div>
                             </div>
                         </div>
 
                         <div id="resultDetails" class="result-details"></div>
 
                         <div class="button-group">
-                            <button class="btn btn-primary" onclick="retakeQuiz()">Try Again</button>
-                            <button class="btn btn-secondary" onclick="backToDashboard()">Back to Dashboard</button>
+                            <button class="btn btn-primary" onclick="retakeQuiz()">
+                                <i class="fas fa-redo"></i>
+                                Try Again
+                            </button>
+                            <button class="btn btn-secondary" onclick="backToHome()">
+                                <i class="fas fa-home"></i>
+                                Back to Home
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -155,7 +346,12 @@
 
             <!-- Footer -->
             <footer class="footer">
-                <p>&copy; 2024 QuizMaster. Keep learning! 📚</p>
+                <div class="footer-content">
+                    <p>
+                        <i class="fas fa-book-reader"></i>
+                        &copy; 2024 QuizMaster - Your Learning Companion
+                    </p>
+                </div>
             </footer>
         </div>
     </div>
@@ -164,31 +360,54 @@
     <div id="userModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2>User Profile</h2>
-                <button class="modal-close" onclick="closeUserModal()">✕</button>
+                <h2>
+                    <i class="fas fa-user-edit"></i>
+                    User Profile
+                </h2>
+                <button class="modal-close" onclick="closeUserModal()" aria-label="Close modal">
+                    <i class="fas fa-times"></i>
+                </button>
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label for="userNameInput">Name:</label>
-                    <input type="text" id="userNameInput" placeholder="Enter your name" class="form-input">
+                    <label for="userNameInput">
+                        <i class="fas fa-signature"></i>
+                        Display Name
+                    </label>
+                    <input type="text" id="userNameInput" placeholder="Enter your name" class="form-input" maxlength="30">
                 </div>
                 <div class="form-group">
-                    <label for="userAvatarSelect">Avatar:</label>
+                    <label for="userAvatarSelect">
+                        <i class="fas fa-user-circle"></i>
+                        Profile Icon
+                    </label>
                     <select id="userAvatarSelect" class="form-input">
-                        <option value="👤">👤 User</option>
-                        <option value="🧑">🧑 Person</option>
-                        <option value="👨‍🎓">👨‍🎓 Student</option>
-                        <option value="🎯">🎯 Target</option>
-                        <option value="⭐">⭐ Star</option>
-                        <option value="🚀">🚀 Rocket</option>
-                        <option value="🧠">🧠 Brain</option>
-                        <option value="📚">📚 Books</option>
+                        <option value="fa-user">Default User</option>
+                        <option value="fa-user-graduate">Student</option>
+                        <option value="fa-user-astronaut">Astronaut</option>
+                        <option value="fa-user-ninja">Ninja</option>
+                        <option value="fa-brain">Brain</option>
+                        <option value="fa-rocket">Rocket</option>
+                        <option value="fa-star">Star</option>
+                        <option value="fa-crown">Crown</option>
                     </select>
+                </div>
+                <div class="avatar-preview">
+                    <span>Preview:</span>
+                    <div class="preview-avatar" id="avatarPreview">
+                        <i class="fas fa-user"></i>
+                    </div>
                 </div>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary" onclick="saveUserProfile()">Save Profile</button>
-                <button class="btn btn-secondary" onclick="closeUserModal()">Cancel</button>
+                <button class="btn btn-primary" onclick="saveUserProfile()">
+                    <i class="fas fa-save"></i>
+                    Save Profile
+                </button>
+                <button class="btn btn-secondary" onclick="closeUserModal()">
+                    <i class="fas fa-times"></i>
+                    Cancel
+                </button>
             </div>
         </div>
     </div>
