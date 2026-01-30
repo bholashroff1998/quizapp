@@ -2,6 +2,93 @@
    QUIZMASTER - PROFESSIONAL SCRIPT
    ============================================ */
 
+// Sound Effects System
+const soundEffects = {
+    enabled: true,
+    
+    // Simple beep sounds using Web Audio API
+    playSound(type) {
+        if (!this.enabled) return;
+        
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        const oscillator = audioContext.createOscillator();
+        const gainNode = audioContext.createGain();
+        
+        oscillator.connect(gainNode);
+        gainNode.connect(audioContext.destination);
+        
+        // Different sounds for different actions
+        switch(type) {
+            case 'correct':
+                // Happy, ascending chime
+                this.playChime(audioContext, oscillator, gainNode, [523.25, 659.25, 783.99], 0.15);
+                break;
+            case 'incorrect':
+                // Descending tone
+                this.playChime(audioContext, oscillator, gainNode, [392, 349.23], 0.2);
+                break;
+            case 'click':
+                // Short click
+                oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+                gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1);
+                oscillator.start(audioContext.currentTime);
+                oscillator.stop(audioContext.currentTime + 0.1);
+                break;
+            case 'complete':
+                // Victory fanfare
+                this.playChime(audioContext, oscillator, gainNode, [523.25, 659.25, 783.99, 1046.50], 0.3);
+                break;
+            case 'next':
+                // Soft transition
+                oscillator.frequency.setValueAtTime(600, audioContext.currentTime);
+                gainNode.gain.setValueAtTime(0.08, audioContext.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.15);
+                oscillator.start(audioContext.currentTime);
+                oscillator.stop(audioContext.currentTime + 0.15);
+                break;
+            case 'navigate':
+                // Menu navigation
+                oscillator.frequency.setValueAtTime(700, audioContext.currentTime);
+                gainNode.gain.setValueAtTime(0.06, audioContext.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1);
+                oscillator.start(audioContext.currentTime);
+                oscillator.stop(audioContext.currentTime + 0.1);
+                break;
+        }
+    },
+    
+    playChime(audioContext, oscillator, gainNode, frequencies, duration) {
+        const interval = duration / frequencies.length;
+        frequencies.forEach((freq, index) => {
+            const osc = audioContext.createOscillator();
+            const gain = audioContext.createGain();
+            osc.connect(gain);
+            gain.connect(audioContext.destination);
+            
+            osc.frequency.setValueAtTime(freq, audioContext.currentTime + (interval * index));
+            gain.gain.setValueAtTime(0.15, audioContext.currentTime + (interval * index));
+            gain.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + (interval * (index + 1)));
+            
+            osc.start(audioContext.currentTime + (interval * index));
+            osc.stop(audioContext.currentTime + (interval * (index + 1)));
+        });
+    },
+    
+    toggle() {
+        this.enabled = !this.enabled;
+        localStorage.setItem('quizMasterSoundEnabled', this.enabled);
+        return this.enabled;
+    },
+    
+    init() {
+        const saved = localStorage.getItem('quizMasterSoundEnabled');
+        if (saved !== null) {
+            this.enabled = saved === 'true';
+        }
+    }
+};
+
 // Quiz State Management
 const quizState = {
     selectedCategory: '',
@@ -25,6 +112,7 @@ const userProgress = {
 
 // Initialize App
 function initializeApp() {
+    soundEffects.init(); // Initialize sound system
     loadUserData();
     loadCategoriesFromDatabase();
     populateDrawerCategories();
@@ -95,12 +183,14 @@ function updateHeaderStats() {
 
 // Navigate to home
 function navigateToHome() {
+    soundEffects.playSound('navigate');
     toggleDrawer();
     showHomeScreen();
 }
 
 // Navigate to dashboard
 function navigateToDashboard() {
+    soundEffects.playSound('navigate');
     toggleDrawer();
     displayDashboard();
 }
@@ -114,6 +204,16 @@ function showHomeScreen() {
         : `Welcome, ${userProgress.name}! Select a category to begin`;
     
     document.getElementById('welcomeMessage').textContent = welcomeMsg;
+    
+    // Update quick stats banner
+    const totalAnswered = userProgress.totalQuestionsAnswered;
+    const overallPercentage = totalAnswered > 0 
+        ? Math.round((userProgress.totalCorrectAnswers / totalAnswered) * 100) 
+        : 0;
+    
+    document.getElementById('homeQuizzesCount').textContent = totalQuizzes;
+    document.getElementById('homeScoreCount').textContent = userProgress.totalCorrectAnswers;
+    document.getElementById('homeAccuracyCount').textContent = `${overallPercentage}%`;
     
     // Display category cards on home screen
     displayCategoryCards('categoriesGrid', false); // false = simple view
@@ -221,12 +321,50 @@ function displayDashboard() {
             ? `Great work, ${userProgress.name}! You've completed ${totalQuizzes} quiz${totalQuizzes > 1 ? 'zes' : ''}.`
             : `Start taking quizzes to track your progress here, ${userProgress.name}!`;
 
-    // Update progress bar
+    // Update accuracy progress bar
     document.getElementById('progressPercentageLabel').textContent = `${overallPercentage}%`;
     document.getElementById('globalProgressFill').style.width = `${overallPercentage}%`;
+    
+    // Calculate category completion progress
+    const totalCategories = Object.keys(quizState.categories).length;
+    let completedCategories = 0;
+    
+    for (const category in quizState.categories) {
+        if (userProgress.categoryProgress[category] && 
+            userProgress.categoryProgress[category].quizzesCompleted > 0) {
+            completedCategories++;
+        }
+    }
+    
+    const completionPercentage = totalCategories > 0 
+        ? Math.round((completedCategories / totalCategories) * 100) 
+        : 0;
+    
+    // Update completion progress bar
+    document.getElementById('completionProgressLabel').textContent = 
+        `${completedCategories} of ${totalCategories}`;
+    document.getElementById('completionProgressFill').style.width = `${completionPercentage}%`;
+    
+    // Update completion info text
+    const completionInfoText = document.getElementById('completionInfoText');
+    if (completedCategories === 0) {
+        completionInfoText.textContent = 'Complete at least one quiz in each category';
+    } else if (completedCategories === totalCategories) {
+        completionInfoText.textContent = '🎉 Congratulations! You\'ve attempted all categories!';
+        completionInfoText.style.color = 'var(--success)';
+        completionInfoText.style.fontWeight = '600';
+    } else {
+        const remaining = totalCategories - completedCategories;
+        completionInfoText.textContent = `${remaining} categor${remaining > 1 ? 'ies' : 'y'} remaining`;
+        completionInfoText.style.color = 'var(--gray-500)';
+        completionInfoText.style.fontWeight = 'normal';
+    }
 
     // Display category progress cards on dashboard
     displayCategoryCards('dashboardCategoriesGrid', true); // true = detailed view
+    
+    // Display recent activity
+    displayRecentActivity();
     
     // Update all user displays
     updateAllUserDisplays();
@@ -270,14 +408,19 @@ function displayCategoryCards(gridId = 'categoriesGrid', detailedView = false) {
             ? Math.round((progress.correctAnswers / progress.questionsAnswered) * 100) 
             : 0;
         
-        const progressBarWidth = progress.quizzesCompleted > 0 
-            ? Math.min(100, (progress.quizzesCompleted / 5) * 100)
-            : 0;
+        // Progress bar shows accuracy, not completion count
+        const progressBarWidth = percentage;
 
         const icon = categoryIcons[category] || 'fa-folder';
 
         const card = document.createElement('div');
         card.className = 'category-card';
+        
+        // Add completed class if category has been attempted
+        if (progress.quizzesCompleted > 0) {
+            card.className += ' completed';
+        }
+        
         card.onclick = () => startQuizFromCategory(category);
 
         if (detailedView) {
@@ -292,25 +435,37 @@ function displayCategoryCards(gridId = 'categoriesGrid', detailedView = false) {
                         ? `${progress.quizzesCompleted} quiz${progress.quizzesCompleted > 1 ? 'zes' : ''} completed • ${progress.questionsAnswered} questions answered` 
                         : `${totalQuestions} questions available • Not started`}
                 </div>
-                <div class="category-progress-bar">
-                    <div class="category-progress" style="width: ${progressBarWidth}%"></div>
+                <div class="category-progress-wrapper">
+                    <div class="category-progress-bar">
+                        <div class="category-progress" style="width: ${progressBarWidth}%"></div>
+                    </div>
+                    <div class="category-percentage">
+                        ${percentage > 0 ? `${percentage}%` : 'No attempts yet'}
+                    </div>
                 </div>
-                <div class="category-percentage">${percentage > 0 ? `${percentage}% accuracy` : 'No data yet'}</div>
             `;
         } else {
             // Simple view for home screen
+            const statusText = progress.quizzesCompleted > 0 
+                ? `${progress.quizzesCompleted} attempt${progress.quizzesCompleted > 1 ? 's' : ''} • ${totalQuestions} questions`
+                : `${totalQuestions} questions available`;
+                
             card.innerHTML = `
                 <div class="category-header">
                     <h4 class="category-title">${category}</h4>
                     <i class="fas ${icon} category-icon"></i>
                 </div>
                 <div class="category-stats">
-                    ${totalQuestions} questions available
+                    ${statusText}
                 </div>
-                <div class="category-progress-bar">
-                    <div class="category-progress" style="width: ${progressBarWidth}%"></div>
+                <div class="category-progress-wrapper">
+                    <div class="category-progress-bar">
+                        <div class="category-progress" style="width: ${progressBarWidth}%"></div>
+                    </div>
+                    <div class="category-percentage">
+                        ${percentage > 0 ? `${percentage}%` : 'Start quiz'}
+                    </div>
                 </div>
-                <div class="category-percentage">${progress.quizzesCompleted > 0 ? `${progress.quizzesCompleted} completed` : 'Start quiz'}</div>
             `;
         }
 
@@ -324,6 +479,8 @@ function startQuiz(category = null) {
         return;
     }
 
+    soundEffects.playSound('click');
+    
     quizState.selectedCategory = category;
     quizState.currentQuestionIndex = 0;
     quizState.userAnswers = [];
@@ -387,15 +544,38 @@ function displayQuestion() {
         const optionBtn = document.createElement('button');
         optionBtn.className = 'option-btn';
         
-        if (quizState.userAnswers[quizState.currentQuestionIndex] === index) {
+        const userAnswer = quizState.userAnswers[quizState.currentQuestionIndex];
+        const isCorrectAnswer = index === question.correctAnswer;
+        const isUserAnswer = userAnswer === index;
+        
+        // Add state classes
+        if (isUserAnswer) {
             optionBtn.classList.add('selected');
+            if (isCorrectAnswer) {
+                optionBtn.classList.add('correct');
+            } else {
+                optionBtn.classList.add('incorrect');
+            }
+        } else if (userAnswer !== null && isCorrectAnswer) {
+            // Show correct answer when user selected wrong
+            optionBtn.classList.add('show-correct');
         }
 
         const optionLabel = String.fromCharCode(65 + index); // A, B, C, D
+        
+        let iconHtml = '';
+        if (isUserAnswer && isCorrectAnswer) {
+            iconHtml = '<i class="fas fa-check-circle option-icon"></i>';
+        } else if (isUserAnswer && !isCorrectAnswer) {
+            iconHtml = '<i class="fas fa-times-circle option-icon"></i>';
+        } else if (userAnswer !== null && isCorrectAnswer) {
+            iconHtml = '<i class="fas fa-check-circle option-icon"></i>';
+        }
 
         optionBtn.innerHTML = `
             <span class="option-label">${optionLabel}</span>
             <span class="option-text">${option}</span>
+            ${iconHtml}
         `;
 
         optionBtn.onclick = () => selectOption(index);
@@ -417,8 +597,12 @@ function selectOption(optionIndex) {
     
     quizState.userAnswers[quizState.currentQuestionIndex] = optionIndex;
     
+    // Play sound based on correctness
     if (optionIndex === currentQuestion.correctAnswer) {
         quizState.score++;
+        soundEffects.playSound('correct');
+    } else {
+        soundEffects.playSound('incorrect');
     }
 
     // Update UI
@@ -433,6 +617,7 @@ function nextQuestion() {
     if (isLastQuestion) {
         finishQuiz();
     } else {
+        soundEffects.playSound('next');
         quizState.currentQuestionIndex++;
         displayQuestion();
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -442,6 +627,7 @@ function nextQuestion() {
 // Previous question
 function previousQuestion() {
     if (quizState.currentQuestionIndex > 0) {
+        soundEffects.playSound('next');
         quizState.currentQuestionIndex--;
         displayQuestion();
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -502,6 +688,9 @@ function finishQuiz() {
     // Save data
     saveUserData();
 
+    // Play completion sound
+    soundEffects.playSound('complete');
+
     // Display results
     displayResults();
     switchScreen('resultsScreen');
@@ -514,28 +703,38 @@ function displayResults() {
     const percentage = Math.round((quizState.score / totalQuestions) * 100);
     const incorrect = totalQuestions - quizState.score;
 
-    let resultTitle, resultMessage, iconClass;
+    let resultTitle, resultMessage, iconClass, achievementTitle, achievementSubtitle;
     
     if (percentage === 100) {
         resultTitle = 'Perfect Score!';
         resultMessage = 'Outstanding! You got every question right!';
         iconClass = 'fa-trophy';
+        achievementTitle = '🎯 Perfect Performance!';
+        achievementSubtitle = 'You\'ve mastered this topic completely';
     } else if (percentage >= 80) {
         resultTitle = 'Excellent Work!';
         resultMessage = 'Great job! You really know your stuff!';
         iconClass = 'fa-medal';
+        achievementTitle = '⭐ Excellent Achievement!';
+        achievementSubtitle = 'You\'re doing exceptionally well';
     } else if (percentage >= 60) {
         resultTitle = 'Good Job!';
         resultMessage = 'Well done! Keep practicing to improve further.';
         iconClass = 'fa-thumbs-up';
+        achievementTitle = '👍 Good Progress!';
+        achievementSubtitle = 'You\'re on the right track';
     } else if (percentage >= 40) {
         resultTitle = 'Keep Practicing!';
         resultMessage = 'You\'re making progress. Review and try again!';
         iconClass = 'fa-book-open';
+        achievementTitle = '📚 Keep Learning!';
+        achievementSubtitle = 'Practice makes perfect';
     } else {
         resultTitle = 'Don\'t Give Up!';
         resultMessage = 'Learning takes time. Keep studying and you\'ll improve!';
         iconClass = 'fa-dumbbell';
+        achievementTitle = '💪 Keep Trying!';
+        achievementSubtitle = 'Every attempt is a step forward';
     }
 
     document.getElementById('resultIcon').innerHTML = `<i class="fas ${iconClass}"></i>`;
@@ -545,14 +744,101 @@ function displayResults() {
     document.getElementById('finalPercentage').textContent = `${percentage}%`;
     document.getElementById('correctCount').textContent = quizState.score;
     document.getElementById('incorrectCount').textContent = incorrect;
+    
+    // Update achievement badge
+    document.getElementById('achievementTitle').textContent = achievementTitle;
+    document.getElementById('achievementSubtitle').textContent = achievementSubtitle;
 
+    // Display suggested next quizzes
+    displaySuggestedCategories();
+    
+    // Display result details (collapsed by default)
     displayResultDetails();
+}
+
+// Display suggested categories for next quiz
+function displaySuggestedCategories() {
+    const suggestedContainer = document.getElementById('suggestedCategories');
+    suggestedContainer.innerHTML = '';
+    
+    const currentCategory = quizState.selectedCategory;
+    const allCategories = Object.keys(quizState.categories);
+    
+    // Get categories to suggest (exclude current or show all if only one exists)
+    let suggestedCategories = allCategories.filter(cat => cat !== currentCategory);
+    
+    // If we filtered out the only category, show it anyway
+    if (suggestedCategories.length === 0) {
+        suggestedCategories = [currentCategory];
+    }
+    
+    // Limit to 3 suggestions
+    suggestedCategories.slice(0, 3).forEach(category => {
+        const progress = userProgress.categoryProgress[category] || { 
+            questionsAnswered: 0, 
+            quizzesCompleted: 0
+        };
+        
+        const categoryIcons = {
+            'Science': 'fa-flask',
+            'History': 'fa-landmark',
+            'Geography': 'fa-globe',
+            'Mathematics': 'fa-calculator',
+            'Literature': 'fa-book',
+            'Technology': 'fa-laptop-code',
+            'Sports': 'fa-football-ball',
+            'Music': 'fa-music',
+            'Art': 'fa-palette',
+            'General Knowledge': 'fa-brain'
+        };
+        
+        const icon = categoryIcons[category] || 'fa-folder';
+        const totalQuestions = quizState.categories[category].length;
+        
+        const suggestionDiv = document.createElement('div');
+        suggestionDiv.className = 'suggested-category';
+        suggestionDiv.onclick = () => {
+            startQuiz(category);
+        };
+        
+        suggestionDiv.innerHTML = `
+            <i class="fas ${icon}"></i>
+            <div class="suggested-category-info">
+                <div class="suggested-category-name">${category}</div>
+                <div class="suggested-category-meta">
+                    ${progress.quizzesCompleted > 0 
+                        ? `${progress.quizzesCompleted} completed`
+                        : `${totalQuestions} questions`}
+                </div>
+            </div>
+        `;
+        
+        suggestedContainer.appendChild(suggestionDiv);
+    });
+}
+
+// Toggle result details visibility
+function toggleResultDetails() {
+    const content = document.getElementById('resultDetailsContent');
+    const btn = document.querySelector('.toggle-details-btn');
+    const text = document.getElementById('toggleDetailsText');
+    const icon = document.getElementById('toggleDetailsIcon');
+    
+    if (content.style.display === 'none') {
+        content.style.display = 'block';
+        text.textContent = 'Hide Details';
+        btn.classList.add('expanded');
+    } else {
+        content.style.display = 'none';
+        text.textContent = 'Show Details';
+        btn.classList.remove('expanded');
+    }
 }
 
 // Display result details
 function displayResultDetails() {
-    const resultDetails = document.getElementById('resultDetails');
-    resultDetails.innerHTML = '<h3>Review Your Answers</h3>';
+    const resultDetails = document.getElementById('resultDetailsContent');
+    resultDetails.innerHTML = '';
 
     quizState.shuffledQuestions.forEach((question, index) => {
         const userAnswerIndex = quizState.userAnswers[index];
@@ -610,11 +896,20 @@ function showUserModal() {
     document.getElementById('userModal').classList.add('active');
     document.getElementById('userNameInput').value = userProgress.name;
     document.getElementById('userAvatarSelect').value = userProgress.avatar;
+    document.getElementById('soundToggle').checked = soundEffects.enabled;
     updateAvatarPreview();
 }
 
 function closeUserModal() {
     document.getElementById('userModal').classList.remove('active');
+}
+
+function toggleSound() {
+    const isEnabled = soundEffects.toggle();
+    // Play a test sound to confirm
+    if (isEnabled) {
+        soundEffects.playSound('click');
+    }
 }
 
 function setupAvatarPreview() {
@@ -649,6 +944,111 @@ function saveUserProfile() {
     }
     
     populateDrawerCategories();
+}
+
+// Display recent activity
+function displayRecentActivity() {
+    const activityList = document.getElementById('recentActivityList');
+    if (!activityList) return;
+    
+    activityList.innerHTML = '';
+    
+    if (userProgress.quizzesTaken.length === 0) {
+        activityList.innerHTML = `
+            <div class="no-activity">
+                <i class="fas fa-clipboard-list"></i>
+                <p>No quiz activity yet</p>
+                <p style="font-size: 0.875rem; color: var(--gray-400);">Complete your first quiz to see your activity here</p>
+                <button class="btn btn-primary" onclick="showHomeScreen()">
+                    <i class="fas fa-play"></i>
+                    Start a Quiz
+                </button>
+            </div>
+        `;
+        return;
+    }
+    
+    // Show last 5 quizzes
+    const recentQuizzes = [...userProgress.quizzesTaken].reverse().slice(0, 5);
+    
+    recentQuizzes.forEach(quiz => {
+        const activityItem = document.createElement('div');
+        const percentage = quiz.percentage;
+        
+        let performanceClass = 'poor';
+        if (percentage >= 80) performanceClass = 'excellent';
+        else if (percentage >= 60) performanceClass = 'good';
+        else if (percentage >= 40) performanceClass = 'average';
+        
+        activityItem.className = `activity-item ${performanceClass}`;
+        
+        const date = new Date(quiz.date);
+        const formattedDate = date.toLocaleDateString('en-US', { 
+            month: 'short', 
+            day: 'numeric', 
+            year: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
+        });
+        
+        activityItem.innerHTML = `
+            <div class="activity-content">
+                <div class="activity-category">${quiz.category}</div>
+                <div class="activity-details">
+                    <i class="fas fa-check-circle"></i> ${quiz.score} out of ${quiz.total} correct
+                </div>
+            </div>
+            <div class="activity-score">
+                <span class="activity-percentage">${percentage}%</span>
+                <span class="activity-date">${formattedDate}</span>
+            </div>
+        `;
+        
+        activityList.appendChild(activityItem);
+    });
+}
+
+// Filter categories by search
+function filterCategories() {
+    const searchTerm = document.getElementById('categorySearch').value.toLowerCase();
+    const cards = document.querySelectorAll('#categoriesGrid .category-card');
+    
+    cards.forEach(card => {
+        const categoryName = card.querySelector('.category-title').textContent.toLowerCase();
+        if (categoryName.includes(searchTerm)) {
+            card.style.display = '';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+// Sort categories
+function sortCategories() {
+    const sortBy = document.getElementById('categorySort').value;
+    const grid = document.getElementById('categoriesGrid');
+    const cards = Array.from(grid.querySelectorAll('.category-card'));
+    
+    cards.sort((a, b) => {
+        if (sortBy === 'name') {
+            const nameA = a.querySelector('.category-title').textContent;
+            const nameB = b.querySelector('.category-title').textContent;
+            return nameA.localeCompare(nameB);
+        } else if (sortBy === 'progress') {
+            const progressA = parseFloat(a.querySelector('.category-progress')?.style.width || '0');
+            const progressB = parseFloat(b.querySelector('.category-progress')?.style.width || '0');
+            return progressB - progressA;
+        } else if (sortBy === 'questions') {
+            const questionsA = parseInt(a.querySelector('.category-stats').textContent.match(/\d+/)?.[0] || '0');
+            const questionsB = parseInt(b.querySelector('.category-stats').textContent.match(/\d+/)?.[0] || '0');
+            return questionsB - questionsA;
+        }
+        return 0;
+    });
+    
+    // Clear and re-append sorted cards
+    grid.innerHTML = '';
+    cards.forEach(card => grid.appendChild(card));
 }
 
 // Local storage functions
