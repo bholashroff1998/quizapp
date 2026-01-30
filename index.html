@@ -143,16 +143,58 @@
                                 Welcome to QuizMaster
                             </h1>
                             <p class="welcome-subtitle" id="welcomeMessage">Select a category to start your learning journey</p>
+                            
+                            <!-- Quick Stats Banner -->
+                            <div class="quick-stats-banner">
+                                <div class="quick-stat">
+                                    <i class="fas fa-clipboard-check"></i>
+                                    <div>
+                                        <span class="quick-stat-number" id="homeQuizzesCount">0</span>
+                                        <span class="quick-stat-text">Quizzes Taken</span>
+                                    </div>
+                                </div>
+                                <div class="quick-stat">
+                                    <i class="fas fa-star"></i>
+                                    <div>
+                                        <span class="quick-stat-number" id="homeScoreCount">0</span>
+                                        <span class="quick-stat-text">Total Score</span>
+                                    </div>
+                                </div>
+                                <div class="quick-stat">
+                                    <i class="fas fa-chart-line"></i>
+                                    <div>
+                                        <span class="quick-stat-number" id="homeAccuracyCount">0%</span>
+                                        <span class="quick-stat-text">Accuracy</span>
+                                    </div>
+                                </div>
+                                <button class="view-dashboard-btn" onclick="navigateToDashboard()">
+                                    <i class="fas fa-arrow-right"></i>
+                                    View Full Dashboard
+                                </button>
+                            </div>
                         </div>
 
                         <!-- Categories Section -->
                         <div class="categories-section">
                             <div class="section-header">
-                                <h3>
-                                    <i class="fas fa-folder-open"></i>
-                                    Available Quiz Categories
-                                </h3>
-                                <p>Choose your topic and test your knowledge</p>
+                                <div class="section-header-left">
+                                    <h3>
+                                        <i class="fas fa-folder-open"></i>
+                                        Available Quiz Categories
+                                    </h3>
+                                    <p>Choose your topic and test your knowledge</p>
+                                </div>
+                                <div class="section-header-actions">
+                                    <div class="search-box">
+                                        <i class="fas fa-search"></i>
+                                        <input type="text" id="categorySearch" placeholder="Search categories..." onkeyup="filterCategories()">
+                                    </div>
+                                    <select id="categorySort" class="sort-select" onchange="sortCategories()">
+                                        <option value="name">Sort by Name</option>
+                                        <option value="progress">Sort by Progress</option>
+                                        <option value="questions">Sort by Questions</option>
+                                    </select>
+                                </div>
                             </div>
                             <div id="categoriesGrid" class="categories-grid">
                                 <!-- Category cards will be populated here -->
@@ -206,11 +248,30 @@
                             <div class="global-progress-wrapper">
                                 <div class="progress-bar-container">
                                     <div class="progress-bar-label">
-                                        <span>Overall Progress</span>
+                                        <span>
+                                            <i class="fas fa-chart-line"></i>
+                                            Overall Accuracy
+                                        </span>
                                         <span id="progressPercentageLabel">0%</span>
                                     </div>
                                     <div class="global-progress-bar">
                                         <div id="globalProgressFill" class="progress-fill"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar-label">
+                                        <span>
+                                            <i class="fas fa-tasks"></i>
+                                            Category Completion
+                                        </span>
+                                        <span id="completionProgressLabel">0 of 0</span>
+                                    </div>
+                                    <div class="global-progress-bar">
+                                        <div id="completionProgressFill" class="progress-fill completion"></div>
+                                    </div>
+                                    <div class="progress-info-text" id="completionInfoText">
+                                        Complete at least one quiz in each category
                                     </div>
                                 </div>
                             </div>
@@ -227,6 +288,20 @@
                             </div>
                             <div id="dashboardCategoriesGrid" class="categories-grid">
                                 <!-- Category progress cards will be populated here -->
+                            </div>
+                        </div>
+
+                        <!-- Recent Activity -->
+                        <div class="recent-activity-section">
+                            <div class="section-header">
+                                <h3>
+                                    <i class="fas fa-history"></i>
+                                    Recent Quiz Activity
+                                </h3>
+                                <p>Your latest quiz attempts</p>
+                            </div>
+                            <div id="recentActivityList" class="recent-activity-list">
+                                <!-- Recent activity items will be populated here -->
                             </div>
                         </div>
                     </div>
@@ -328,7 +403,41 @@
                             </div>
                         </div>
 
-                        <div id="resultDetails" class="result-details"></div>
+                        <!-- Achievement Badge -->
+                        <div id="achievementBadge" class="achievement-badge">
+                            <i class="fas fa-award"></i>
+                            <div class="achievement-content">
+                                <span class="achievement-title" id="achievementTitle">Great Job!</span>
+                                <span class="achievement-subtitle" id="achievementSubtitle">Keep up the momentum</span>
+                            </div>
+                        </div>
+
+                        <!-- Next Steps -->
+                        <div class="next-steps">
+                            <h3>
+                                <i class="fas fa-compass"></i>
+                                What's Next?
+                            </h3>
+                            <div id="suggestedCategories" class="suggested-categories">
+                                <!-- Suggested quiz categories will appear here -->
+                            </div>
+                        </div>
+
+                        <div id="resultDetails" class="result-details">
+                            <div class="result-details-header">
+                                <h3>
+                                    <i class="fas fa-list-check"></i>
+                                    Review Your Answers
+                                </h3>
+                                <button class="toggle-details-btn" onclick="toggleResultDetails()">
+                                    <span id="toggleDetailsText">Show Details</span>
+                                    <i class="fas fa-chevron-down" id="toggleDetailsIcon"></i>
+                                </button>
+                            </div>
+                            <div id="resultDetailsContent" class="result-details-content" style="display: none;">
+                                <!-- Detailed results will be populated here -->
+                            </div>
+                        </div>
 
                         <div class="button-group">
                             <button class="btn btn-primary" onclick="retakeQuiz()">
@@ -338,6 +447,10 @@
                             <button class="btn btn-secondary" onclick="backToHome()">
                                 <i class="fas fa-home"></i>
                                 Back to Home
+                            </button>
+                            <button class="btn btn-secondary" onclick="navigateToDashboard()">
+                                <i class="fas fa-chart-bar"></i>
+                                View Progress
                             </button>
                         </div>
                     </div>
@@ -397,6 +510,16 @@
                     <div class="preview-avatar" id="avatarPreview">
                         <i class="fas fa-user"></i>
                     </div>
+                </div>
+                <div class="form-group">
+                    <label class="toggle-label">
+                        <i class="fas fa-volume-up"></i>
+                        Sound Effects
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="soundToggle" onchange="toggleSound()">
+                            <span class="toggle-slider"></span>
+                        </div>
+                    </label>
                 </div>
             </div>
             <div class="modal-footer">
