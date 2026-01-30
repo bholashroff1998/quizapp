@@ -826,13 +826,13 @@ const quizDatabase = {
             "category": "Geographical Status and Physical Features",
             "question": "नेपालले विश्वको कूल क्षेत्रफलको कति प्रतिशत भाग ओगटेको छ?",
             "options": ["०.०१ प्रतिशत", "०.०३ प्रतिशत", "०.०५ प्रतिशत", "०.१ प्रतिशत"],
-            "correct": 1
+            "correctAnswer": 1
         },
         {
             "category": "Geographical Status and Physical Features",
             "question": "नेपालले एसिया महादेशको कति प्रतिशत भाग ओगटेको छ?",
             "options": ["०.१ प्रतिशत", "०.२ प्रतिशत", "०.३ प्रतिशत", "०.५ प्रतिशत"],
-            "correct": 2
+            "correctAnswer": 2
         },
         {
             "category": "Geographical Status and Physical Features",
@@ -843,55 +843,55 @@ const quizDatabase = {
                 "२७°२२' उ. देखि ३१°२७' उ. अक्षांश र ८१°४' पू. देखि ८९°१२' पू. देशान्तर",
                 "२४°२२' उ. देखि २८°२७' उ. अक्षांश र ७८°४' पू. देखि ८६°१२' पू. देशान्तर"
             ],
-            "correct": 1
+            "correctAnswer": 1
         },
         {
             "category": "Geographical Status and Physical Features",
             "question": "नेपाल एसियाको कुन भागमा अवस्थित छ?",
             "options": ["पूर्वी भाग", "पश्चिमी भाग", "मध्य भाग", "दक्षिणी भाग"],
-            "correct": 2
+            "correctAnswer": 2
         },
         {
             "category": "Geographical Status and Physical Features",
             "question": "नेपालको पूर्व-पश्चिम औसत लम्बाइ कति रहेको छ?",
             "options": ["७८५ कि.मि.", "८५० कि.मि.", "८८५ कि.मि.", "९२० कि.मि."],
-            "correct": 2
+            "correctAnswer": 2
         },
         {
             "category": "Geographical Status and Physical Features",
             "question": "नेपालको उत्तर-दक्षिण औसत चौडाइ कति रहेको छ?",
             "options": ["१५३ कि.मि.", "१७३ कि.मि.", "१९३ कि.मि.", "२१३ कि.मि."],
-            "correct": 2
+            "correctAnswer": 2
         },
         {
             "category": "Geographical Status and Physical Features",
             "question": "नेपालको उत्तर-दक्षिण अधिकतम चौडाइ २४१ कि.मि. छ भने न्यूनतम चौडाइ कति छ?",
             "options": ["१२५ कि.मि.", "१३५ कि.मि.", "१४५ कि.मि.", "१५५ कि.मि."],
-            "correct": 2
+            "correctAnswer": 2
         },
         {
             "category": "Geographical Status and Physical Features",
             "question": "नेपाल समुद्र सतहदेखि कति किलोमिटर टाढा छ?",
             "options": ["१०२६ कि.मि.", "११२६ कि.मि.", "१२२६ कि.मि.", "१३२६ कि.मि."],
-            "correct": 1
+            "correctAnswer": 1
         },
         {
             "category": "Geographical Status and Physical Features",
             "question": "नेपालको प्रामाणिक समय कुन हिमाललाई आधार मानी निर्धारण गरिएको छ?",
             "options": ["सगरमाथा", "गौरीशंकर", "मनास्लु", "अन्नपूर्ण"],
-            "correct": 1
+            "correctAnswer": 1
         },
         {
             "category": "Geographical Status and Physical Features",
             "question": "नेपालको सबभन्दा होचो भू-भाग कुन हो?",
             "options": ["झापाको केचनाकलन", "मोरङको विराटनगर", "धनुषाको मुसरनिया", "सुनसरीको इनरुवा"],
-            "correct": 2
+            "correctAnswer": 2
         },
         {
             "category": "Geographical Status and Physical Features",
             "question": "विश्वकै सर्वोच्च चुचुरो सगरमाथा नेपालको कुन जिल्लामा रहेको छ?",
             "options": ["ताप्लेजुङ", "संखुवासभा", "सोलुखुम्बु", "दोलखा"],
-            "correct": 2
+            "correctAnswer": 2
         }
     ],
     "Regional Classification": [
@@ -899,7 +899,7 @@ const quizDatabase = {
             "category": "Regional Classification",
             "question": "धरातलको आधारमा नेपाललाई कति भागमा विभाजन गरिएको छ?",
             "options": ["दुई", "तीन", "चार", "पाँच"],
-            "correct": 1
+            "correctAnswer": 1
         },
         {
             "category": "Regional Classification",
@@ -910,43 +910,43 @@ const quizDatabase = {
                 "३००० मिटरदेखि ८,८४८.८६ मिटरसम्म",
                 "४००० मिटरदेखि ९००० मिटरसम्म"
             ],
-            "correct": 2
+            "correctAnswer": 2
         },
         {
             "category": "Regional Classification",
             "question": "नेपालका हिमाली जिल्ला कति छन्?",
             "options": ["१८", "२१", "२४", "२७"],
-            "correct": 1
+            "correctAnswer": 1
         },
         {
             "category": "Regional Classification",
             "question": "म्याग्दी जिल्लालाई हिमाली जिल्लाको रुपमा कहिले वर्गीकरण गरिएको हो?",
             "options": ["वि.सं. २०७४", "वि.सं. २०७५", "वि.सं. २०७६", "वि.सं. २०७७"],
-            "correct": 1
+            "correctAnswer": 1
         },
         {
             "category": "Regional Classification",
             "question": "पहाडी जिल्लाको संख्या कति रहेको छ?",
             "options": ["३०", "३२", "३५", "३८"],
-            "correct": 2
+            "correctAnswer": 2
         },
         {
             "category": "Regional Classification",
             "question": "नेपालको कुन क्षेत्रलाई 'अन्न भण्डार' भनी चिनिन्छ?",
             "options": ["हिमाल", "पहाड", "तराई", "भित्री मधेश"],
-            "correct": 2
+            "correctAnswer": 2
         },
         {
             "category": "Regional Classification",
             "question": "तराईका जिल्लाहरुको संख्या कति रहेको छ?",
             "options": ["१७", "२१", "२२", "२५"],
-            "correct": 1
+            "correctAnswer": 1
         },
         {
             "category": "Regional Classification",
             "question": "भित्री मधेशमा पर्ने जिल्लाहरू कति छन्?",
             "options": ["५", "६", "७", "८"],
-            "correct": 2
+            "correctAnswer": 2
         }
     ],
     "Water Resources and River Origins": [
@@ -954,93 +954,93 @@ const quizDatabase = {
             "category": "Water Resources and River Origins",
             "question": "नेपालमा विश्‍वको कुल जलस्रोतको कति भाग रहेको छ?",
             "options": ["२.७२ प्रतिशत", "३.२७ प्रतिशत", "१.२७ प्रतिशत", "२.२७ प्रतिशत"],
-            "correct": 3
+            "correctAnswer": 3
         },
         {
             "category": "Water Resources and River Origins",
             "question": "कोशी नदीको औसत जलप्रवाह १५६४ क्युविक मिटर प्रति सेकेन्ड रहेको छ भने यसको लम्बाइ कति रहेको छ?",
             "options": ["९२० कि. मी.", "७२० कि. मी.", "८२० कि. मी.", "५२० कि. मी."],
-            "correct": 1
+            "correctAnswer": 1
         },
         {
             "category": "Water Resources and River Origins",
             "question": "पश्चिम राप्ती नदीको उद्गमस्थल कहाँ हो?",
             "options": ["प्यूठानको स्वर्गद्वारी", "रोल्पाको महाभारत पर्वत", "सल्यानको चुरे", "दाङको चुरे"],
-            "correct": 1
+            "correctAnswer": 1
         },
         {
             "category": "Water Resources and River Origins",
             "question": "कर्णाली नदीको उद्‍गम स्थल कहाँ रहेको छ?",
             "options": ["मुस्ताङ लेक", "तिब्बत", "धौलागिरी हिमाल", "अपि हिमाल"],
-            "correct": 1
+            "correctAnswer": 1
         },
         {
             "category": "Water Resources and River Origins",
             "question": "कालीगण्डकी नदीको उद्‍गम स्थल कहाँ हो?",
             "options": ["मुस्ताङ लेक", "बुद्ध हिमाल", "तिब्बत", "गणेश हिमाल"],
-            "correct": 0
+            "correctAnswer": 0
         },
         {
             "category": "Water Resources and River Origins",
             "question": "मेची नदीको उद्‍गम स्थल कहाँ रहेको छ?",
             "options": ["सिन्धुली गढी", "लाली खर्क", "दूधकुण्ड", "गौमुखी (प्युठान)"],
-            "correct": 1
+            "correctAnswer": 1
         },
         {
             "category": "Water Resources and River Origins",
             "question": "कमला नदीको उद्‍गम स्थल कहाँ हो?",
             "options": ["महाभारत पर्वत", "सिन्धुली गढी", "चुरे डाँडा", "बागद्वार"],
-            "correct": 1
+            "correctAnswer": 1
         }
     ],
-    "Sanskrit and Alternative Names": [
+    "Rivers Alternative Names": [
         {
-            "category": "Sanskrit and Alternative Names",
+            "category": "Rivers Alternative Names",
             "question": "\"दुधमती\" भनेर पनि चिनिने नदी कुन हो?",
             "options": ["पश्चिम राप्ती", "पूर्वी राप्‍ती नदी", "बबई", "कर्मनाशा"],
-            "correct": 1
+            "correctAnswer": 1
         },
         {
-            "category": "Sanskrit and Alternative Names",
+            "category": "Rivers Alternative Names",
             "question": "अरुण नदीको संस्कृत नाम के हो?",
             "options": ["महाप्रभा", "शितप्रभा", "शुभश्रवा", "माण्डवी"],
-            "correct": 0
+            "correctAnswer": 0
         },
         {
-            "category": "Sanskrit and Alternative Names",
+            "category": "Rivers Alternative Names",
             "question": "मर्स्याङ्दी नदीलाई संस्कृतमा कुन नामले चिनिन्छ?",
             "options": ["महाप्रभा", "शितप्रभा", "शुक्लगंगा", "पञ्चेश्वरी"],
-            "correct": 1
+            "correctAnswer": 1
         },
         {
-            "category": "Sanskrit and Alternative Names",
+            "category": "Rivers Alternative Names",
             "question": "'शुक्लगंगा' वा 'सुवर्णसरिता' कुन नेपाली नदीका संस्कृत नाम हुन्?",
             "options": ["सुनकोशी", "कर्णाली", "सेतीगण्डकी", "त्रिशुली"],
-            "correct": 2
+            "correctAnswer": 2
         },
         {
-            "category": "Sanskrit and Alternative Names",
+            "category": "Rivers Alternative Names",
             "question": "सुनकोशी नदीको संस्कृत नाम के हो?",
             "options": ["हेमगंगा", "धर्मधारा", "कृष्णगण्डकी", "शुभश्रवा"],
-            "correct": 3
+            "correctAnswer": 3
         },
         {
-            "category": "Sanskrit and Alternative Names",
+            "category": "Rivers Alternative Names",
             "question": "झिमरुक नदीको संस्कृत नाम के हो?",
             "options": ["माण्डवी", "धर्मावती", "सूर्यवती", "रुद्रमती"],
-            "correct": 1
+            "correctAnswer": 1
         },
         {
-            "category": "Sanskrit and Alternative Names",
+            "category": "Rivers Alternative Names",
             "question": "धोबीखोलालाई संस्कृतमा कुन नामले चिनिन्छ?",
             "options": ["चम्पावती", "सत्यवाहिनी", "रुद्रमती", "धर्मधारा"],
-            "correct": 2
+            "correctAnswer": 2
         },
         {
-            "category": "Sanskrit and Alternative Names",
+            "category": "Rivers Alternative Names",
             "question": "तमोर नदीको संस्कृत नाम के हो?",
             "options": ["भद्रावती", "दुखःधी", "अचिरावती", "कृष्णगण्डकी"],
-            "correct": 1
+            "correctAnswer": 1
         }
     ],
     "Hydropower and Technical Data": [
@@ -1048,25 +1048,25 @@ const quizDatabase = {
             "category": "Hydropower and Technical Data",
             "question": "कोशी नदीको विद्युत उत्पादन क्षमता कति रहेको छ?",
             "options": ["२१००० मे. वा.", "२२००० मे. वा.", "३२००० मे. वा.", "१५००० मे. वा."],
-            "correct": 1
+            "correctAnswer": 1
         },
         {
             "category": "Hydropower and Technical Data",
             "question": "गण्डकी नदीको विद्युत उत्पादन क्षमता कति रहेको छ?",
             "options": ["२२००० मे. वा.", "३२००० मे. वा.", "२१००० मे. वा.", "२५००० मे. वा."],
-            "correct": 2
+            "correctAnswer": 2
         },
         {
             "category": "Hydropower and Technical Data",
             "question": "कर्णाली नदीको विद्युत उत्पादन क्षमता कति रहेको छ?",
             "options": ["२१००० मे. वा.", "२२००० मे. वा.", "३२००० मे. वा.", "३५००० मे. वा."],
-            "correct": 2
+            "correctAnswer": 2
         },
         {
             "category": "Hydropower and Technical Data",
             "question": "नेपालका नदीहरुबाट कति हेक्टर जमिनमा सिंचाइ सुविधा उपलब्ध हुन सक्छ?",
             "options": ["७० लाख हेक्टर", "७५ लाख हेक्टर", "८० लाख हेक्टर", "८५ लाख हेक्टर"],
-            "correct": 2
+            "correctAnswer": 2
         }
     ],
     "Scientific Disciplines and Branches of Knowledge": [
@@ -1074,566 +1074,454 @@ const quizDatabase = {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Anatomy?",
             "options": ["Study of internal structure of organisms", "Study of ancient writing", "Study of human races and cultures", "Study of the mind"],
-            "correct": 0
+            "correctAnswer": 0
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Anthropology?",
             "options": ["Study of humans, their origins, and societies", "Study of human history through artifacts", "Study of moral principles", "Study of aging"],
-            "correct": 0
+            "correctAnswer": 0
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Archaeology?",
             "options": ["Study of celestial bodies", "Study of human history through artifacts", "Study of ancient writing", "Study of mountains"],
-            "correct": 1
+            "correctAnswer": 1
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Astronomy?",
             "options": ["Study of celestial bodies (planets, stars, etc.)", "Study of the influence of stars on human affairs", "Study of the universe's origin and structure", "Study of time measurement"],
-            "correct": 0
+            "correctAnswer": 0
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Astrology?",
             "options": ["Study of celestial bodies", "Study of the universe's origin", "Study of the influence of stars on human affairs", "Study of sound"],
-            "correct": 2
+            "correctAnswer": 2
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Acoustics?",
             "options": ["Study of light", "Study of sound", "Study of matter and energy", "Study of time measurement"],
-            "correct": 1
+            "correctAnswer": 1
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Botany?",
             "options": ["Study of plants", "Study of trees", "Study of flowers", "Study of garden cultivation"],
-            "correct": 0
+            "correctAnswer": 0
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Biology?",
             "options": ["Study of bacteria", "Study of all living organisms", "Study of microorganisms", "Study of viruses"],
-            "correct": 1
+            "correctAnswer": 1
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Bacteriology?",
             "options": ["Study of bacteria", "Study of viruses", "Study of microorganisms", "Study of all living organisms"],
-            "correct": 0
+            "correctAnswer": 0
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Calligraphy?",
             "options": ["Study of ancient writing", "Art of beautiful handwriting", "Study of inscriptions", "Study of teaching"],
-            "correct": 1
+            "correctAnswer": 1
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Cosmology?",
             "options": ["Study of celestial bodies", "Study of the universe's origin and structure", "Study of matter and its changes", "Study of the Earth's physical structure"],
-            "correct": 1
+            "correctAnswer": 1
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Chemistry?",
             "options": ["Study of matter and energy", "Study of matter and its changes", "Study of metals and their properties", "Study of the Earth's physical structure"],
-            "correct": 1
+            "correctAnswer": 1
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Dendrology?",
             "options": ["Study of plants", "Study of trees", "Study of flowers", "Study of garden cultivation"],
-            "correct": 1
+            "correctAnswer": 1
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Ethics?",
             "options": ["Study of moral principles", "Study of the mind", "Study of teaching", "Study of human races and cultures"],
-            "correct": 0
+            "correctAnswer": 0
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Ethnology?",
             "options": ["Study of humans, their origins, and societies", "Study of human races and cultures", "Study of inscriptions", "Study of ancient writing"],
-            "correct": 1
+            "correctAnswer": 1
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Entomology?",
             "options": ["Study of insects", "Study of fish", "Study of birds", "Study of animals"],
-            "correct": 0
+            "correctAnswer": 0
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Eugenics?",
             "options": ["Study of improving the human species through genetics", "Study of female health", "Study of aging", "Study of diseases"],
-            "correct": 0
+            "correctAnswer": 0
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Epigraphy?",
             "options": ["Study of ancient writing", "Study of inscriptions", "Art of beautiful handwriting", "Study of coins or currency"],
-            "correct": 1
+            "correctAnswer": 1
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Floriculture?",
             "options": ["Study of plants", "Study of growing flowers", "Study of garden cultivation", "Study of trees"],
-            "correct": 1
+            "correctAnswer": 1
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Geology?",
             "options": ["Study of mountains", "Study of earthquakes", "Study of the Earth's physical structure", "Study of the universe's origin"],
-            "correct": 2
+            "correctAnswer": 2
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Gerontology?",
             "options": ["Study of aging", "Study of female health", "Study of diseases", "Study of body functions"],
-            "correct": 0
+            "correctAnswer": 0
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Gynecology?",
             "options": ["Study of female health", "Study of aging", "Study of body functions", "Study of diseases"],
-            "correct": 0
+            "correctAnswer": 0
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Gastronomy?",
             "options": ["Study of food and culture", "Study of the stomach", "Study of body functions", "Study of kidneys"],
-            "correct": 0
+            "correctAnswer": 0
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Horticulture?",
             "options": ["Study of plants", "Study of garden cultivation", "Study of growing flowers", "Study of trees"],
-            "correct": 1
+            "correctAnswer": 1
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Horology?",
             "options": ["Study of time measurement", "Study of sound", "Study of light", "Study of mountains"],
-            "correct": 0
+            "correctAnswer": 0
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Ichthyology?",
             "options": ["Study of fish", "Study of insects", "Study of birds", "Study of animals"],
-            "correct": 0
+            "correctAnswer": 0
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Microbiology?",
             "options": ["Study of bacteria", "Study of viruses", "Study of microorganisms", "Study of all living organisms"],
-            "correct": 2
+            "correctAnswer": 2
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Metallurgy?",
             "options": ["Study of metals and their properties", "Study of matter and its changes", "Study of the Earth's physical structure", "Study of matter and energy"],
-            "correct": 0
+            "correctAnswer": 0
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Nephrology?",
             "options": ["Study of kidneys", "Study of the nervous system", "Study of teeth", "Study of body functions"],
-            "correct": 0
+            "correctAnswer": 0
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Neurology?",
             "options": ["Study of the mind", "Study of the nervous system", "Study of body functions", "Study of diseases"],
-            "correct": 1
+            "correctAnswer": 1
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Numismatics?",
             "options": ["Study/collection of coins or currency", "Study of inscriptions", "Study of ancient writing", "Study of time measurement"],
-            "correct": 0
+            "correctAnswer": 0
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Odontology?",
             "options": ["Study of teeth", "Study of kidneys", "Study of the nervous system", "Study of diseases"],
-            "correct": 0
+            "correctAnswer": 0
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Ornithology?",
             "options": ["Study of birds", "Study of fish", "Study of insects", "Study of animals"],
-            "correct": 0
+            "correctAnswer": 0
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Optics?",
             "options": ["Study of light", "Study of sound", "Study of matter and energy", "Study of time measurement"],
-            "correct": 0
+            "correctAnswer": 0
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Orology?",
             "options": ["Study of mountains", "Study of the Earth's physical structure", "Study of earthquakes", "Study of the universe's origin"],
-            "correct": 0
+            "correctAnswer": 0
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Paleography?",
             "options": ["Study of ancient writing", "Study of inscriptions", "Art of beautiful handwriting", "Study of human history through artifacts"],
-            "correct": 0
+            "correctAnswer": 0
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Physiology?",
             "options": ["Study of body functions", "Study of diseases", "Study of the mind", "Study of internal structure of organisms"],
-            "correct": 0
+            "correctAnswer": 0
         },
         {
+            "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Pathology?",
             "options": ["Study of diseases", "Study of body functions", "Study of poisons", "Study of viruses"],
-            "correct": 0
+            "correctAnswer": 0
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Psychology?",
             "options": ["Study of the mind", "Study of the nervous system", "Study of moral principles", "Study of teaching"],
-            "correct": 0
+            "correctAnswer": 0
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Pedagogy?",
             "options": ["Study of teaching", "Study of the mind", "Study of moral principles", "Study of ancient writing"],
-            "correct": 0
+            "correctAnswer": 0
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Pisciculture?",
             "options": ["Study of fish", "Breeding and rearing of fish", "Study of silk production", "Study of garden cultivation"],
-            "correct": 1
+            "correctAnswer": 1
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Physics?",
             "options": ["Study of matter and energy", "Study of matter and its changes", "Study of light", "Study of sound"],
-            "correct": 0
+            "correctAnswer": 0
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Seismology?",
             "options": ["Study of earthquakes", "Study of mountains", "Study of the Earth's physical structure", "Study of sound"],
-            "correct": 0
+            "correctAnswer": 0
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Sericulture?",
             "options": ["Study of silk production", "Breeding and rearing of fish", "Study of garden cultivation", "Study of growing flowers"],
-            "correct": 0
+            "correctAnswer": 0
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Toxicology?",
             "options": ["Study of poisons", "Study of diseases", "Study of viruses", "Study of bacteria"],
-            "correct": 0
+            "correctAnswer": 0
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Virology?",
             "options": ["Study of viruses", "Study of bacteria", "Study of microorganisms", "Study of diseases"],
-            "correct": 0
+            "correctAnswer": 0
         },
         {
             "category": "Scientific Disciplines and Branches of Knowledge",
             "question": "What is Zoology?",
             "options": ["Study of animals", "Study of all living organisms", "Study of birds", "Study of fish"],
-            "correct": 0
+            "correctAnswer": 0
         }
     ],
-  "Weather and Environmental Instruments": [
-    {
-      "category": "Weather and Environmental Instruments",
-      "question": "Which instrument measures atmospheric pressure?",
-      "options": ["Hygrometer", "Anemometer", "Barometer", "Thermometer"],
-      "correctAnswer": 2
-    },
-    {
-      "category": "Weather and Environmental Instruments",
-      "question": "Which instrument measures humidity?",
-      "options": ["Barometer", "Hygrometer", "Manometer", "Rain Gauge"],
-      "correctAnswer": 1
-    },
-    {
-      "category": "Weather and Environmental Instruments",
-      "question": "Which device measures wind speed?",
-      "options": ["Hydrometer", "Wind Vane", "Barograph", "Anemometer"],
-      "correctAnswer": 3
-    },
-    {
-      "category": "Weather and Environmental Instruments",
-      "question": "Which device shows wind direction?",
-      "options": ["Wind Vane", "Compass", "Rain Gauge", "Thermometer"],
-      "correctAnswer": 0
-    },
-    {
-      "category": "Weather and Environmental Instruments",
-      "question": "Which device measures rainfall?",
-      "options": ["Anemometer", "Rain Gauge", "Hydrometer", "Hygrometer"],
-      "correctAnswer": 1
-    },
-    {
-      "category": "Weather and Environmental Instruments",
-      "question": "Which device is used for continuous pressure recording?",
-      "options": ["Tachometer", "Barograph", "Seismograph", "Anemometer"],
-      "correctAnswer": 1
-    },
-    {
-      "category": "Weather and Environmental Instruments",
-      "question": "Which device continuously records temperature?",
-      "options": ["Thermograph", "Thermometer", "Hydrometer", "Barograph"],
-      "correctAnswer": 0
-    }
-  ],
-  "Physics and General Measurement": [
-    {
-      "category": "Physics and General Measurement",
-      "question": "Which device measures temperature?",
-      "options": ["Calorimeter", "Barometer", "Seismograph", "Thermometer"],
-      "correctAnswer": 3
-    },
-    {
-      "category": "Physics and General Measurement",
-      "question": "Which device measures light intensity?",
-      "options": ["Lux Meter", "Calorimeter", "Photometer", "Barometer"],
-      "correctAnswer": 0
-    },
-    {
-      "category": "Physics and General Measurement",
-      "question": "Which instrument measures sound intensity?",
-      "options": ["Hydrometer", "Sound Level Meter", "Geiger Counter", "Lux Meter"],
-      "correctAnswer": 1
-    },
-    {
-      "category": "Physics and General Measurement",
-      "question": "Which device measures liquid density?",
-      "options": ["Hydrometer", "Colorimeter", "Altimeter", "Manometer"],
-      "correctAnswer": 0
-    },
-    {
-      "category": "Physics and General Measurement",
-      "question": "Which instrument measures gas pressure?",
-      "options": ["Voltmeter", "Manometer", "Barometer", "Colorimeter"],
-      "correctAnswer": 1
-    },
-    {
-      "category": "Physics and General Measurement",
-      "question": "Which instrument measures heat energy?",
-      "options": ["Thermometer", "Hydrometer", "Calorimeter", "Manometer"],
-      "correctAnswer": 2
-    },
-    {
-      "category": "Physics and General Measurement",
-      "question": "Which instrument measures small lengths?",
-      "options": ["Vernier Caliper", "Telescope", "Barometer", "Hydrometer"],
-      "correctAnswer": 0
-    },
-    {
-      "category": "Physics and General Measurement",
-      "question": "Which instrument measures very small thickness?",
-      "options": ["Manometer", "Vernier Caliper", "Micrometer Screw Gauge", "Calorimeter"],
-      "correctAnswer": 2
-    },
-    {
-      "category": "Physics and General Measurement",
-      "question": "Which device measures viscosity?",
-      "options": ["Hydrometer", "Viscometer", "Barometer", "Calorimeter"],
-      "correctAnswer": 1
-    }
-  ],
-  "Electrical and Electronics": [
-    {
-      "category": "Electrical and Electronics",
-      "question": "Which device measures current?",
-      "options": ["Voltmeter", "Ammeter", "Multimeter", "Ohmmeter"],
-      "correctAnswer": 1
-    },
-    {
-      "category": "Electrical and Electronics",
-      "question": "Which device measures voltage?",
-      "options": ["Galvanometer", "Multimeter", "Voltmeter", "Ammeter"],
-      "correctAnswer": 2
-    },
-    {
-      "category": "Electrical and Electronics",
-      "question": "Which device measures resistance?",
-      "options": ["Voltmeter", "Ohmmeter", "Ammeter", "Hydrometer"],
-      "correctAnswer": 1
-    },
-    {
-      "category": "Electrical and Electronics",
-      "question": "Which device detects electric charge?",
-      "options": ["Ammeter", "Electroscope", "X-ray Machine", "Manometer"],
-      "correctAnswer": 1
-    },
-    {
-      "category": "Electrical and Electronics",
-      "question": "Which device measures electrical power?",
-      "options": ["Ammeter", "Wattmeter", "Voltmeter", "Ohmmeter"],
-      "correctAnswer": 1
-    },
-    {
-      "category": "Electrical and Electronics",
-      "question": "Which device displays electrical waveforms?",
-      "options": ["Multimeter", "Oscilloscope", "Colorimeter", "Voltmeter"],
-      "correctAnswer": 1
-    }
-  ],
-  "Medical and Laboratory Instruments": [
-    {
-      "category": "Medical and Laboratory Instruments",
-      "question": "Which device measures blood pressure?",
-      "options": ["ECG", "Sphygmomanometer", "Glucometer", "Stethoscope"],
-      "correctAnswer": 1
-    },
-    {
-      "category": "Medical and Laboratory Instruments",
-      "question": "Which device is used to listen to heart and lungs?",
-      "options": ["Stethoscope", "X-ray", "Manometer", "Endoscope"],
-      "correctAnswer": 0
-    },
-    {
-      "category": "Medical and Laboratory Instruments",
-      "question": "Which device records heart activity?",
-      "options": ["ECG Machine", "X-ray", "MRI", "EEG Machine"],
-      "correctAnswer": 0
-    },
-    {
-      "category": "Medical and Laboratory Instruments",
-      "question": "Which device records brain activity?",
-      "options": ["EMG Machine", "EEG Machine", "ECG Machine", "X-ray"],
-      "correctAnswer": 1
-    },
-    {
-      "category": "Medical and Laboratory Instruments",
-      "question": "Which device measures lung capacity?",
-      "options": ["Glucometer", "Spirometer", "Endoscope", "Thermometer"],
-      "correctAnswer": 1
-    },
-    {
-      "category": "Medical and Laboratory Instruments",
-      "question": "Which device spins samples at high speed?",
-      "options": ["Spectrometer", "Centrifuge", "Microscope", "Incubator"],
-      "correctAnswer": 1
-    },
-    {
-      "category": "Medical and Laboratory Instruments",
-      "question": "Which device is used to examine internal organs?",
-      "options": ["Stethoscope", "Endoscope", "X-ray Machine", "Telescope"],
-      "correctAnswer": 1
-    }
-  ],
-  "Navigation and Earth Science": [
-    {
-      "category": "Navigation and Earth Science",
-      "question": "Which instrument measures earthquake intensity?",
-      "options": ["Calorimeter", "Seismograph", "Barograph", "Tachometer"],
-      "correctAnswer": 1
-    },
-    {
-      "category": "Navigation and Earth Science",
-      "question": "Which device measures altitude?",
-      "options": ["Altimeter", "Odometer", "Manometer", "Tachometer"],
-      "correctAnswer": 0
-    },
-    {
-      "category": "Navigation and Earth Science",
-      "question": "Which device measures distance traveled by a vehicle?",
-      "options": ["Compass", "Odometer", "Speedometer", "Altimeter"],
-      "correctAnswer": 1
-    },
-    {
-      "category": "Navigation and Earth Science",
-      "question": "Which device finds direction using Earth's magnetic field?",
-      "options": ["Sextant", "Compass", "Barometer", "Astrolabe"],
-      "correctAnswer": 1
-    }
+  "Scientific and Measurement Instruments": [
+    { "category": "Scientific and Measurement Instruments","question": "Which instrument measures atmospheric pressure?", "options": ["Anemometer", "Barometer", "Hygrometer", "Thermometer"], "correctAnswer": 1 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device measures temperature?", "options": ["Barometer", "Calorimeter", "Thermometer", "Seismograph"], "correctAnswer": 2 },
+    { "category": "Scientific and Measurement Instruments","question": "Which instrument measures humidity?", "options": ["Manometer", "Hygrometer", "Barometer", "Rain Gauge"], "correctAnswer": 1 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device measures wind speed?", "options": ["Barograph", "Wind Vane", "Anemometer", "Hydrometer"], "correctAnswer": 2 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device shows wind direction?", "options": ["Compass", "Wind Vane", "Rain Gauge", "Thermometer"], "correctAnswer": 1 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device measures rainfall?", "options": ["Anemometer", "Hydrometer", "Rain Gauge", "Hygrometer"], "correctAnswer": 2 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device measures light intensity?", "options": ["Calorimeter", "Photometer", "Lux Meter", "Barometer"], "correctAnswer": 2 },
+    { "category": "Scientific and Measurement Instruments","question": "Which instrument measures sound intensity?", "options": ["Geiger Counter", "Hydrometer", "Lux Meter", "Sound Level Meter"], "correctAnswer": 3 },
+    { "category": "Scientific and Measurement Instruments","question": "Which instrument measures earthquake intensity?", "options": ["Calorimeter", "Barograph", "Seismograph", "Tachometer"], "correctAnswer": 2 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device measures liquid density?", "options": ["Colorimeter", "Hydrometer", "Altimeter", "Manometer"], "correctAnswer": 1 },
+    { "category": "Scientific and Measurement Instruments","question": "Which instrument measures gas pressure?", "options": ["Voltmeter", "Barometer", "Manometer", "Colorimeter"], "correctAnswer": 2 },
+    { "category": "Scientific and Measurement Instruments","question": "Which instrument measures heat energy?", "options": ["Thermometer", "Calorimeter", "Hydrometer", "Manometer"], "correctAnswer": 1 },
+    { "category": "Scientific and Measurement Instruments","question": "Which instrument measures the altitude of the Pole Star?", "options": ["Quadrant", "Sextant", "Clinometer", "Astrolabe"], "correctAnswer": 1 },
+    { "category": "Scientific and Measurement Instruments","question": "Which instrument measures small lengths?", "options": ["Vernier Caliper", "Telescope", "Barometer", "Hydrometer"], "correctAnswer": 0 },
+    { "category": "Scientific and Measurement Instruments","question": "Which instrument measures very small thickness?", "options": ["Manometer", "Micrometer Screw Gauge", "Vernier Caliper", "Calorimeter"], "correctAnswer": 1 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device measures current?", "options": ["Voltmeter", "Multimeter", "Ammeter", "Ohmmeter"], "correctAnswer": 2 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device measures voltage?", "options": ["Galvanometer", "Voltmeter", "Multimeter", "Ammeter"], "correctAnswer": 1 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device measures resistance?", "options": ["Voltmeter", "Ammeter", "Hydrometer", "Ohmmeter"], "correctAnswer": 3 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device measures rotational speed?", "options": ["Speedometer", "Altimeter", "Tachometer", "Odometer"], "correctAnswer": 2 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device measures speed of a vehicle?", "options": ["Altimeter", "Speedometer", "Odometer", "Tachometer"], "correctAnswer": 1 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device measures distance traveled by a vehicle?", "options": ["Compass", "Speedometer", "Altimeter", "Odometer"], "correctAnswer": 3 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device measures altitude?", "options": ["Odometer", "Altimeter", "Manometer", "Tachometer"], "correctAnswer": 1 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device detects electric charge?", "options": ["X-ray Machine", "Ammeter", "Electroscope", "Manometer"], "correctAnswer": 2 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device detects radiation?", "options": ["Hydrometer", "Barometer", "Geiger Counter", "Colorimeter"], "correctAnswer": 2 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device measures radioactivity?", "options": ["Microscope", "Geiger-Muller Tube", "Manometer", "Telescope"], "correctAnswer": 1 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device measures pH of liquids?", "options": ["Manometer", "pH Meter", "Hydrometer", "Colorimeter"], "correctAnswer": 1 },
+    { "category": "Scientific and Measurement Instruments","question": "Which instrument separates light into its spectrum?", "options": ["Periscope", "Microscope", "Telescope", "Spectrometer"], "correctAnswer": 3 },
+    { "category": "Scientific and Measurement Instruments","question": "Which instrument measures absorbance of light by liquids?", "options": ["Colorimeter", "Altimeter", "Micrometer", "Barometer"], "correctAnswer": 0 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device is used for continuous pressure recording?", "options": ["Tachometer", "Seismograph", "Barograph", "Anemometer"], "correctAnswer": 2 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device continuously records temperature?", "options": ["Thermometer", "Thermograph", "Hydrometer", "Barograph"], "correctAnswer": 1 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device records the direction of a moving object?", "options": ["Compass", "Speedometer", "Telescope", "Galvanometer"], "correctAnswer": 0 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device measures angular elevation of objects?", "options": ["Sextant", "Quadrant", "Clinometer", "Astrolabe"], "correctAnswer": 2 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device measures ionizing radiation?", "options": ["Lux Meter", "Dosimeter", "Barometer", "Colorimeter"], "correctAnswer": 1 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device measures refractive index?", "options": ["Telescope", "Refractometer", "Microscope", "Spectrometer"], "correctAnswer": 1 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device measures sugar concentration in liquids?", "options": ["Refractometer", "Hydrometer", "Calorimeter", "Manometer"], "correctAnswer": 0 },
+    { "category": "Scientific and Measurement Instruments","question": "Which instrument measures unknown resistance using a bridge?", "options": ["Spectrometer", "Wheatstone Bridge", "Voltmeter", "Ammeter"], "correctAnswer": 1 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device measures magnetic field strength?", "options": ["Barometer", "Galvanometer", "Magnetometer", "Voltmeter"], "correctAnswer": 2 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device is used for astronomical observations?", "options": ["Periscope", "Endoscope", "Telescope", "Microscope"], "correctAnswer": 2 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device magnifies tiny objects?", "options": ["Periscope", "Microscope", "Telescope", "Endoscope"], "correctAnswer": 1 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device is used to see objects behind obstacles?", "options": ["Sextant", "Thermometer", "Periscope", "Microscope"], "correctAnswer": 2 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device is used to examine internal organs?", "options": ["Stethoscope", "X-ray Machine", "Endoscope", "Telescope"], "correctAnswer": 2 },
+    { "category": "Scientific and Measurement Instruments","question": "Which instrument is used to take X-ray images?", "options": ["Ultrasound", "MRI Scanner", "X-ray Machine", "Endoscope"], "correctAnswer": 2 },
+    { "category": "Scientific and Measurement Instruments","question": "Which machine uses magnetism to scan the body?", "options": ["Ultrasound", "CT Scanner", "MRI Scanner", "Endoscope"], "correctAnswer": 2 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device uses sound waves to image inside the body?", "options": ["Ultrasound Scanner", "Endoscope", "MRI Scanner", "X-ray Machine"], "correctAnswer": 0 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device measures blood pressure?", "options": ["ECG", "Glucometer", "Sphygmomanometer", "Stethoscope"], "correctAnswer": 2 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device is used to listen to heart and lungs?", "options": ["X-ray", "Manometer", "Stethoscope", "Endoscope"], "correctAnswer": 2 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device measures blood sugar?", "options": ["Sphygmomanometer", "Colorimeter", "Glucometer", "Manometer"], "correctAnswer": 2 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device records heart activity?", "options": ["X-ray", "ECG Machine", "MRI", "EEG Machine"], "correctAnswer": 1 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device records brain activity?", "options": ["EMG Machine", "ECG Machine", "EEG Machine", "X-ray"], "correctAnswer": 2 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device records muscle activity?", "options": ["ECG Machine", "EEG Machine", "Barometer", "EMG Machine"], "correctAnswer": 3 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device measures lung capacity?", "options": ["Glucometer", "Endoscope", "Spirometer", "Thermometer"], "correctAnswer": 2 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device sterilizes lab equipment?", "options": ["Microscope", "Incubator", "Autoclave", "Spectrometer"], "correctAnswer": 2 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device is used to grow microorganisms?", "options": ["Telescope", "Microscope", "Incubator", "Autoclave"], "correctAnswer": 2 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device spins samples at high speed?", "options": ["Spectrometer", "Microscope", "Centrifuge", "Incubator"], "correctAnswer": 2 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device measures moisture in soil?", "options": ["Lux Meter", "Soil Moisture Meter", "Hydrometer", "Manometer"], "correctAnswer": 1 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device measures soil pH?", "options": ["Manometer", "Soil pH Meter", "Hydrometer", "Colorimeter"], "correctAnswer": 1 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device measures area on a map?", "options": ["Calorimeter", "Planimeter", "Hygrometer", "Tachometer"], "correctAnswer": 1 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device measures angles or slopes?", "options": ["Compass", "Sextant", "Quadrant", "Clinometer"], "correctAnswer": 3 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device finds direction using Earth's magnetic field?", "options": ["Sextant", "Barometer", "Compass", "Astrolabe"], "correctAnswer": 2 },
+    { "category": "Scientific and Measurement Instruments","question": "Which instrument measures distance using laser?", "options": ["Laser Rangefinder", "Speedometer", "Odometer", "Anemometer"], "correctAnswer": 0 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device detects metal?", "options": ["Metal Detector", "Geiger Counter", "Magnetometer", "Ammeter"], "correctAnswer": 0 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device measures torque?", "options": ["Tachometer", "Dynamometer", "Torque Wrench", "Manometer"], "correctAnswer": 2 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device measures electrical power?", "options": ["Ammeter", "Voltmeter", "Wattmeter", "Ohmmeter"], "correctAnswer": 2 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device measures frequency of signals?", "options": ["Ammeter", "Oscilloscope", "Voltmeter", "Frequency Counter"], "correctAnswer": 3 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device displays electrical waveforms?", "options": ["Multimeter", "Colorimeter", "Oscilloscope", "Voltmeter"], "correctAnswer": 2 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device measures dissolved oxygen in water?", "options": ["Lux Meter", "Hydrometer", "DO Meter", "Manometer"], "correctAnswer": 2 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device measures salinity?", "options": ["Refractometer", "Hydrometer", "Salinometer", "Manometer"], "correctAnswer": 2 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device measures turbidity of liquids?", "options": ["Hydrometer", "Manometer", "Colorimeter", "Turbidity Meter"], "correctAnswer": 3 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device measures chlorine in water?", "options": ["Hydrometer", "pH Meter", "Calorimeter", "Chlorine Meter"], "correctAnswer": 3 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device measures pollution in air?", "options": ["Anemometer", "Air Quality Monitor", "Barometer", "Rain Gauge"], "correctAnswer": 1 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device measures carbon dioxide levels?", "options": ["Manometer", "Hydrometer", "CO2 Meter", "Colorimeter"], "correctAnswer": 2 },
+    { "category": "Scientific and Measurement Instruments","question": "Which instrument measures alcohol content?", "options": ["Hydrometer", "Spectrometer", "Manometer", "Alcoholmeter"], "correctAnswer": 3 },
+    { "category": "Scientific and Measurement Instruments","question": "Which instrument measures smoke density?", "options": ["Manometer", "Lux Meter", "Smoke Density Meter", "Sound Meter"], "correctAnswer": 2 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device detects leaks in pipes?", "options": ["Hydrometer", "Manometer", "Thermometer", "Leak Detector"], "correctAnswer": 3 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device measures viscosity?", "options": ["Barometer", "Hydrometer", "Calorimeter", "Viscometer"], "correctAnswer": 3 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device measures hardness of materials?", "options": ["Hardness Tester", "Torque Wrench", "Micrometer", "Vernier Caliper"], "correctAnswer": 0 },
+    { "category": "Scientific and Measurement Instruments","question": "Which device measures thickness of coatings?", "options": ["Hydrometer", "Coating Thickness Gauge", "Micrometer", "Manometer"], "correctAnswer": 1 }
   ],
   "The Magna Carta and the Foundations of Democracy": [
     {
+        "category": "The Magna Carta and the Foundations of Democracy",
       "question": "म्याग्ना कार्टा (Magna Carta) मा इङ्गल्याण्डका कुन राजाले सन् १२१५ मा हस्ताक्षर/मोहर गरेका थिए?",
       "options": ["राजा हेनरी प्रथम", "राजा जोन", "राजा रिचार्ड प्रथम", "राजा हेनरी तृतीय"],
-      "correct": 1
+      "correctAnswer": 1
     },
     {
+        "category": "The Magna Carta and the Foundations of Democracy",
       "question": "म्याग्ना कार्टाको मूल दस्तावेज (सन् १२१५ को संस्करण) मा जम्मा कति धाराहरू (Clauses) थिए?",
       "options": ["३९", "६३", "७५", "८९"],
-      "correct": 1
+      "correctAnswer": 1
     },
     {
+        "category": "The Magna Carta and the Foundations of Democracy",
       "question": "म्याग्ना कार्टाले कुन मुख्य सिद्धान्तलाई स्थापित गर्‍यो, जसलाई आधुनिक लोकतन्त्रको आधार मानिन्छ?",
       "options": ["निरपेक्ष राजतन्त्र", "दैवी अधिकारको सिद्धान्त", "कानूनी शासन (Rule of Law)", "संसदको सर्वोच्चता"],
-      "correct": 2
+      "correctAnswer": 2
     },
     {
+        "category": "The Magna Carta and the Foundations of Democracy",
       "question": "म्याग्ना कार्टामा हस्ताक्षर गर्नका लागि राजा जोनलाई मुख्य रूपमा दबाब दिने समूह कुन थियो?",
       "options": ["सर्वसाधारण जनता", "इसाई पादरी वर्ग", "विद्रोही सामन्तहरू (Rebellious Barons)", "रोमन क्याथोलिक चर्च"],
-      "correct": 2
+      "correctAnswer": 2
     },
     {
+        "category": "The Magna Carta and the Foundations of Democracy",
       "question": "म्याग्ना कार्टाको धारा ३९ (Clause 39) को मुख्य विषयवस्तु के हो?",
       "options": ["लण्डन शहरको स्वतन्त्रताको ग्यारेन्टी", "कानूनको उचित प्रक्रिया (Due Process) र 'समान व्यक्तिहरूद्वारा न्याय' को अधिकार", "राजाको कर लगाउने असीमित अधिकार", "सामन्तहरूलाई मात्रै कानूनी अधिकार प्रदान गर्ने"],
-      "correct": 1
+      "correctAnswer": 1
     },
     {
+        "category": "The Magna Carta and the Foundations of Democracy",
       "question": "म्याग्ना कार्टाले स्थापना गरेको एउटा महत्वपूर्ण नियम के हो?",
       "options": ["राजालाई मनपर्ने जतिबेला पनि सामन्तहरूलाई मृत्युदण्ड दिन पाउने", "कानूनको उचित प्रक्रिया नअपनाई कर सङ्कलन गर्न पाउने", "न्यायलाई कसैलाई बेच्न, इन्कार गर्न वा ढिलाइ गर्न नपाउने", "राजाको निर्णय नै अन्तिम र अपरिवर्तनीय हुने"],
-      "correct": 2
+      "correctAnswer": 2
     },
     {
+        "category": "The Magna Carta and the Foundations of Democracy",
       "question": "ल्याटिन भाषामा 'म्याग्ना कार्टा' (Magna Carta) शब्दको शाब्दिक अर्थ के हो?",
       "options": ["राजाको अधिकार", "शक्तिशाली कानून", "महान्/ठूलो अधिकारपत्र (Great Charter)", "सामन्तहरूको सहमति"],
-      "correct": 2
+      "correctAnswer": 2
     },
     {
+        "category": "The Magna Carta and the Foundations of Democracy",
       "question": "म्याग्ना कार्टाले राजाको शक्तिलाई कसरी सीमित गरेको थियो?",
       "options": ["कर लगाउनुअघि सामन्तहरूको परिषद् (Council of Barons) को सामान्य सहमति आवश्यक पर्ने व्यवस्था गरी", "राजालाई शाही सेना राख्न पूर्ण रूपमा निषेध गरी", "राजालाई आफ्नो इच्छाअनुसार नयाँ नियम बनाउने असीमित अधिकार प्रदान गरी", "न्यायाधीशको नियुक्ति सामन्तहरूले मात्र गर्ने व्यवस्था गरी"],
-      "correct": 0
+      "correctAnswer": 0
     },
     {
+        "category": "The Magna Carta and the Foundations of Democracy",
       "question": "हाल (सन् २०२४ सम्म) इङ्गल्याण्डको कानूनमा म्याग्ना कार्टाको सन् १२१५ को मूल संस्करणका कतिवटा धाराहरू मात्रै वैधानिक रूपमा लागू छन्?",
       "options": ["१", "३", "६", "६३"],
-      "correct": 1
+      "correctAnswer": 1
     },
     {
+        "category": "The Magna Carta and the Foundations of Democracy",
       "question": "म्याग्ना कार्टालाई कुन देशको संविधानको आधारशिला मानिन्छ?",
       "options": ["जापान", "संयुक्त राज्य अमेरिका (USA)", "फ्रान्स", "चीन"],
-      "correct": 1
+      "correctAnswer": 1
     },
     {
+        "category": "The Magna Carta and the Foundations of Democracy",
       "question": "म्याग्ना कार्टाको मुख्य सिद्धान्त 'विधिको शासन' (Rule of Law) लाई कार्यान्वयन गराउन राजालाई दबाब दिन सामन्तहरूले कति जनाको एक समिति गठन गरेका थिए?",
       "options": ["१२ जनाको", "१५ जनाको", "२५ जनाको", "४० जनाको"],
-      "correct": 2
+      "correctAnswer": 2
     },
     {
+        "category": "The Magna Carta and the Foundations of Democracy",
       "question": "म्याग्ना कार्टालाई 'स्वतन्त्रताको आधारशिला' (Cornerstone of Liberty) भन्नुको मुख्य कारण के हो?",
       "options": ["यसले राजालाई असीमित अधिकार दियो।", "यसले सामन्तहरूलाई मात्र सबै अधिकार दियो।", "यसले सर्वप्रथम राजाको शक्तिलाई सीमित गरी कानूनलाई सर्वोच्च मान्यो।", "यो विश्वको सबैभन्दा लामो लिखित संविधान हो।"],
-      "correct": 2
+      "correctAnswer": 2
     },
     {
+        "category": "The Magna Carta and the Foundations of Democracy",
       "question": "सन् १२१५ को म्याग्ना कार्टामा हस्ताक्षर गर्नुअघि राजा जोनले चर्चसँगको विवाद मिलाउन कसलाई आर्कबिशप अफ क्यान्टरबरीको रूपमा मान्यता दिएका थिए?",
       "options": ["टमस बेकेट", "पोप तेस्रो इनोसेंट", "जोन अफ सेलिसबरी", "स्टेफेन लाङ्टन"],
-      "correct": 3
+      "correctAnswer": 3
     },
     {
+        "category": "The Magna Carta and the Foundations of Democracy",
       "question": "म्याग्ना कार्टाको कुन सिद्धान्तलाई आधुनिक 'बन्दीप्रत्यक्षीकरणको अधिकार' (Habeas Corpus) को आधार मानिन्छ?",
       "options": ["राजालाई कर लगाउने अधिकार सीमितता", "चर्चको स्वतन्त्रताको ग्यारेन्टी", "कसैलाई पनि कानूनको उचित प्रक्रिया बिना कैद नगरिने", "सामन्तहरूको सहमति बिना सैन्य सेवा नलिने"],
-      "correct": 2
+      "correctAnswer": 2
     },
     {
+        "category": "The Magna Carta and the Foundations of Democracy",
       "question": "म्याग्ना कार्टामा उल्लेख भएको 'स्वतन्त्र व्यक्ति' (Free Man) शब्दले त्यसबेलाका कस्ता वर्गका मानिसहरूलाई समेट्थ्यो?",
       "options": ["इङ्गल्याण्डका सबै नागरिक र किसानहरूलाई", "केवल सामन्त र पादरीहरूलाई", "सामन्त, पादरी र सबै सहरी बासिन्दाहरूलाई", "केवल दासहरूलाई"],
-      "correct": 2
+      "correctAnswer": 2
     }
   ]
 };
